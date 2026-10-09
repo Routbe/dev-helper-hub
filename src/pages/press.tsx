@@ -866,19 +866,19 @@ export function PressPage() {
       </div>
 
       {/* Standaardtekst, persberichten, citaat en contact op crème */}
-      <div className="bg-[#F7F3EB] px-4 py-16 md:px-8">
-        <div className="mx-auto max-w-5xl space-y-16 text-[#1D3528]">
+      <div className="bg-background px-4 py-16 md:px-8">
+        <div className="mx-auto max-w-5xl space-y-16 text-foreground">
           {/* Standaard beschrijving */}
           <section id="tekst" className="scroll-mt-24">
-            <h2 className="font-serif text-2xl text-[#1D3528] md:text-3xl">
+            <h2 className="font-serif text-2xl text-foreground md:text-3xl">
               {COPY.boilerplateTitle[l]}
             </h2>
-            <div className="mt-6 rounded-3xl border border-[#1D3528]/12 bg-white/70 p-6">
-              <p className="text-sm leading-relaxed text-[#1D3528]/90">{BOILERPLATE[l]}</p>
+            <div className="mt-6 rounded-3xl border border-border bg-card p-6">
+              <p className="text-sm leading-relaxed text-foreground/90">{BOILERPLATE[l]}</p>
               <button
                 type="button"
                 onClick={() => copy(BOILERPLATE[l], "boiler", COPY.copied[l])}
-                className="mt-4 inline-flex min-h-[40px] items-center gap-2 rounded-full border border-[#1D3528]/20 px-4 text-xs font-medium text-[#1D3528] transition-colors hover:border-[color:var(--color-terracotta)] hover:text-[color:var(--color-terracotta)]"
+                className="mt-4 inline-flex min-h-[40px] items-center gap-2 rounded-full border border-border px-4 text-xs font-medium text-foreground transition-colors hover:border-[color:var(--color-terracotta)] hover:text-[color:var(--color-terracotta)]"
               >
                 {copied === "boiler" ? (
                   <Check className="h-3.5 w-3.5" />
@@ -892,13 +892,13 @@ export function PressPage() {
 
           {/* Citaat voor de pers */}
           <section aria-label={COPY.quoteTitle[l]}>
-            <h2 className="font-serif text-2xl text-[#1D3528] md:text-3xl">{COPY.quoteTitle[l]}</h2>
-            <blockquote className="mt-6 rounded-3xl border-l-4 border-[color:var(--color-terracotta)] bg-white/70 p-6">
+            <h2 className="font-serif text-2xl text-foreground md:text-3xl">{COPY.quoteTitle[l]}</h2>
+            <blockquote className="mt-6 rounded-3xl border-l-4 border-[color:var(--color-terracotta)] bg-card p-6">
               <Quote className="h-5 w-5 text-[color:var(--color-terracotta)]" aria-hidden />
-              <p className="mt-3 font-serif text-lg italic leading-relaxed text-[#1D3528]">
+              <p className="mt-3 font-serif text-lg italic leading-relaxed text-foreground">
                 “{QUOTE[l]}”
               </p>
-              <footer className="mt-3 text-xs uppercase tracking-[0.16em] text-[#1D3528]/70">
+              <footer className="mt-3 text-xs uppercase tracking-[0.16em] text-foreground/70">
                 {QUOTE_SOURCE[l]}
               </footer>
               <button
@@ -906,7 +906,7 @@ export function PressPage() {
                 onClick={() =>
                   copy(`“${QUOTE[l]}” ${QUOTE_SOURCE[l]}`, "quote", COPY.copied[l])
                 }
-                className="mt-4 inline-flex min-h-[40px] items-center gap-2 rounded-full border border-[#1D3528]/20 px-4 text-xs font-medium text-[#1D3528] transition-colors hover:border-[color:var(--color-terracotta)] hover:text-[color:var(--color-terracotta)]"
+                className="mt-4 inline-flex min-h-[40px] items-center gap-2 rounded-full border border-border px-4 text-xs font-medium text-foreground transition-colors hover:border-[color:var(--color-terracotta)] hover:text-[color:var(--color-terracotta)]"
               >
                 {copied === "quote" ? (
                   <Check className="h-3.5 w-3.5" />
@@ -920,22 +920,22 @@ export function PressPage() {
 
           {/* Persberichten */}
           <section id="persberichten" className="scroll-mt-24">
-            <h2 className="font-serif text-2xl text-[#1D3528] md:text-3xl">
+            <h2 className="font-serif text-2xl text-foreground md:text-3xl">
               {COPY.releasesTitle[l]}
             </h2>
-            <p className="mt-3 text-sm text-[#1D3528]/70">{COPY.releasesLede[l]}</p>
+            <p className="mt-3 text-sm text-foreground/70">{COPY.releasesLede[l]}</p>
             <ul className="mt-6 grid gap-4 md:grid-cols-2">
               {RELEASES.map((r) => (
                 <li key={r.href}>
                   <a
                     href={r.href}
                     download
-                    className="flex items-center gap-4 rounded-3xl border border-[#1D3528]/12 bg-white/70 p-5 transition-colors hover:border-[color:var(--color-terracotta)]"
+                    className="flex items-center gap-4 rounded-3xl border border-border bg-card p-5 transition-colors hover:border-[color:var(--color-terracotta)]"
                   >
                     <FileText className="h-6 w-6 shrink-0 text-[color:var(--color-terracotta)]" />
                     <span className="min-w-0">
-                      <span className="block text-sm font-medium text-[#1D3528]">{r.name[l]}</span>
-                      <span className="block text-xs text-[#1D3528]/60">PDF · {r.date}</span>
+                      <span className="block text-sm font-medium text-foreground">{r.name[l]}</span>
+                      <span className="block text-xs text-foreground/60">PDF · {r.date}</span>
                     </span>
                   </a>
                 </li>
@@ -945,7 +945,7 @@ export function PressPage() {
 
           {/* Digitale soevereiniteit & tech-manifest */}
           <section id="digitaal" className="scroll-mt-24">
-            <div className="overflow-hidden rounded-[2rem] border border-[#1D3528]/12 bg-[color:var(--surface-forest,#1D3528)] p-8 text-[color:var(--color-cream)] md:p-12">
+            <div className="overflow-hidden rounded-[2rem] border border-border bg-[color:var(--surface-forest,#1D3528)] p-8 text-[color:var(--color-cream)] md:p-12">
               <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[color:var(--color-terracotta)]">
                 {COPY.techEyebrow[l]}
               </p>
@@ -1003,20 +1003,20 @@ export function PressPage() {
           {/* Perscontact */}
 
           <section id="contact" className="scroll-mt-24">
-            <h2 className="font-serif text-2xl text-[#1D3528] md:text-3xl">
+            <h2 className="font-serif text-2xl text-foreground md:text-3xl">
               {COPY.contactTitle[l]}
             </h2>
-            <p className="mt-3 text-sm text-[#1D3528]/70">{COPY.contactLede[l]}</p>
-            <div className="mt-6 flex flex-col gap-3 rounded-3xl border border-[#1D3528]/12 bg-white/70 p-6 text-sm">
+            <p className="mt-3 text-sm text-foreground/70">{COPY.contactLede[l]}</p>
+            <div className="mt-6 flex flex-col gap-3 rounded-3xl border border-border bg-card p-6 text-sm">
               <a
                 href={`mailto:${PRESS_EMAIL}`}
-                className="inline-flex items-center gap-2 text-[#1D3528] hover:text-[color:var(--color-terracotta)]"
+                className="inline-flex items-center gap-2 text-foreground hover:text-[color:var(--color-terracotta)]"
               >
                 <Mail className="h-4 w-4" /> {PRESS_EMAIL}
               </a>
               <a
                 href="tel:+3222015609"
-                className="inline-flex items-center gap-2 text-[#1D3528] hover:text-[color:var(--color-terracotta)]"
+                className="inline-flex items-center gap-2 text-foreground hover:text-[color:var(--color-terracotta)]"
               >
                 <Phone className="h-4 w-4" /> {PRESS_PHONE}
               </a>
@@ -1024,13 +1024,13 @@ export function PressPage() {
                 href="https://www.openstreetmap.org/?mlat=50.8636&mlon=4.3560#map=17/50.8636/4.3560"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[#1D3528] hover:text-[color:var(--color-terracotta)]"
+                className="inline-flex items-center gap-2 text-foreground hover:text-[color:var(--color-terracotta)]"
               >
                 <ExternalLink className="h-4 w-4" /> Quai du Batelage 2, 1000 Brussel
               </a>
-              <span className="font-mono text-xs text-[#1D3528]/60">{SITE_URL}</span>
+              <span className="font-mono text-xs text-foreground/60">{SITE_URL}</span>
             </div>
-            <p className="mt-6 text-xs leading-relaxed text-[#1D3528]/70">{COPY.usage[l]}</p>
+            <p className="mt-6 text-xs leading-relaxed text-foreground/70">{COPY.usage[l]}</p>
           </section>
         </div>
       </div>
