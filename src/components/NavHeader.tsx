@@ -1,5 +1,5 @@
 import { LocalLink } from "@/components/LocalLink";
-import { pathFor, translatePath } from "@/lib/routes-i18n";
+import { pathFor } from "@/lib/routes-i18n";
 import { Link, useNavigate, useRouterState } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { readCart } from "@/lib/cart";
@@ -807,46 +807,7 @@ function MobileAccordion({
   );
 }
 
-/** Minimale horizontale taalkeuze voor de lade-voettekst: NL · FR · EN. */
+/** Dezelfde volledige taalkeuze als op desktop, compact in de mobiele lade. */
 function MobileLangToggle() {
-  const { lang, setLang } = useT();
-  const navigate = useNavigate();
-  const pathname = useRouterState({ select: (s) => s.location.pathname });
-  const searchStr = useRouterState({ select: (s) => s.location.searchStr });
-  const hash = useRouterState({ select: (s) => s.location.hash });
-  const codes: Lang[] = ["nl", "fr", "en"];
-
-  const switchTo = (code: Lang) => {
-    setLang(code);
-    const first = pathname.split("/").filter(Boolean)[0];
-    if (first !== "nl" && first !== "fr" && first !== "en") return;
-    const suffix = `${searchStr && searchStr !== "?" ? (searchStr.startsWith("?") ? searchStr : `?${searchStr}`) : ""}${hash ? (hash.startsWith("#") ? hash : `#${hash}`) : ""}`;
-    navigate({ to: `${translatePath(pathname, code)}${suffix}` as never, replace: true });
-  };
-
-  return (
-    <div role="group" aria-label="Language" className="flex items-center gap-1.5">
-      {codes.map((code, i) => (
-        <span key={code} className="flex items-center gap-1.5">
-          {i > 0 && <span className="text-border">·</span>}
-          <button
-            type="button"
-            aria-pressed={code === lang}
-            onClick={(e) => {
-              e.stopPropagation();
-              switchTo(code);
-            }}
-            className={
-              "text-xs uppercase tracking-wider transition-colors " +
-              (code === lang
-                ? "font-semibold text-[color:var(--color-terracotta)]"
-                : "text-muted-foreground hover:text-foreground")
-            }
-          >
-            {code}
-          </button>
-        </span>
-      ))}
-    </div>
-  );
+  return <LanguageSwitcher className="inline-flex" />;
 }

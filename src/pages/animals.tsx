@@ -65,8 +65,9 @@ const COPY: Record<
 
 
 export function AnimalsPage() {
-  const { lang } = useT();
-  const c = COPY[lang];
+  const { lang, tx } = useT();
+  const source = COPY[lang];
+  const c = Object.fromEntries(Object.entries(source).map(([key, value]) => [key, tx(value)])) as typeof source;
   const { data: animals } = useSuspenseQuery(animalsQO);
   const managed = useAlbumPhotos();
 
@@ -161,8 +162,9 @@ export function AnimalsPage() {
 }
 
 export function AnimalDetailPage({ slug }: { slug: string }) {
-  const { lang } = useT();
-  const c = COPY[lang];
+  const { lang, tx } = useT();
+  const source = COPY[lang];
+  const c = Object.fromEntries(Object.entries(source).map(([key, value]) => [key, tx(value)])) as typeof source;
   const { data: animals } = useSuspenseQuery(animalsQO);
   const animal = (animals ?? []).find((a) => animalSlug(a, lang) === slug);
   const managed = useAlbumPhotos();

@@ -1877,7 +1877,7 @@ export function LanguageSwitcher({ className = "inline-flex" }: { className?: st
   );
 }
 
-/** Wereldbolletje met de extra talen (enkel volledig vertaalde talen zijn zichtbaar). */
+/** Wereldbolletje met alle extra talen; onafgewerkte talen zijn zichtbaar maar uitgeschakeld. */
 function MoreLanguages({
   extra,
   onPick,
@@ -1901,8 +1901,8 @@ function MoreLanguages({
       document.removeEventListener("keydown", esc);
     };
   }, [open]);
-  if (!list.length) return null;
   const active = list.find((x) => x.code === extra);
+  const comingSoon = langComingSoonLabel();
   return (
     <div ref={ref} className="relative">
       <button
@@ -1928,7 +1928,7 @@ function MoreLanguages({
       {open ? (
         <ul
           role="listbox"
-          className="absolute end-0 top-full z-50 mt-2 max-h-80 w-56 overflow-auto rounded-2xl border border-border bg-popover p-1.5 text-popover-foreground shadow-lg"
+          className="fixed inset-x-4 top-32 z-50 grid max-h-[calc(100dvh-9rem)] grid-cols-2 overflow-auto rounded-2xl border border-border bg-background p-1.5 text-foreground shadow-2xl md:absolute md:inset-x-auto md:end-0 md:top-full md:mt-2 md:max-h-80 md:w-56 md:grid-cols-1 md:bg-popover md:text-popover-foreground"
         >
           {list.map((x) => (
             <li key={x.code}>
@@ -1936,6 +1936,8 @@ function MoreLanguages({
                 type="button"
                 role="option"
                 aria-selected={x.code === extra}
+                aria-disabled={!x.ready}
+                disabled={!x.ready}
                 lang={x.htmlLang}
                 dir={x.dir}
                 onClick={(e) => {
@@ -1943,7 +1945,7 @@ function MoreLanguages({
                   setOpen(false);
                   onPick(x.code);
                 }}
-                className="flex w-full items-center justify-between gap-3 rounded-xl px-3 py-2 text-start text-sm hover:bg-muted"
+                className="flex w-full items-center justify-between gap-3 rounded-xl px-3 py-2 text-start text-sm transition-colors hover:bg-muted disabled:cursor-not-allowed disabled:opacity-55 disabled:hover:bg-transparent"
               >
                 <span className="min-w-0">
                   <span className="block truncate font-medium">{x.native}</span>
@@ -1951,7 +1953,13 @@ function MoreLanguages({
                     {x.english}
                   </span>
                 </span>
-                {x.code === extra ? <Check className="size-4 shrink-0 text-primary" /> : null}
+                {x.ready ? (
+                  x.code === extra ? <Check className="size-4 shrink-0 text-primary" /> : null
+                ) : (
+                  <span className="shrink-0 rounded-full border border-border px-2 py-0.5 text-[10px] font-semibold uppercase text-muted-foreground" dir="ltr">
+                    {comingSoon}
+                  </span>
+                )}
               </button>
             </li>
           ))}
@@ -1959,4 +1967,13 @@ function MoreLanguages({
       ) : null}
     </div>
   );
+}
+
+function langComingSoonLabel(): string {
+  if (typeof document === "undefined") return "Coming soon";
+  const lang = document.documentElement.lang.toLowerCase();
+  if (lang.startsWith("nl")) return "Binnenkort";
+  if (lang.startsWith("fr")) return "Bientôt";
+  if (lang.startsWith("de")) return "Demnächst";
+  return "Coming soon";
 }

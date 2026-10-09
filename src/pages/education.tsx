@@ -263,8 +263,24 @@ const THEMES: Record<Lang, { title: string; body: string; src: string; alt: stri
 };
 
 export function EducationPage() {
-  const { lang } = useT();
-  const c = COPY[lang];
+  const { lang, tx } = useT();
+  const source = COPY[lang];
+  const c = {
+    ...source,
+    ...Object.fromEntries(
+      Object.entries(source)
+        .filter(([, value]) => typeof value === "string")
+        .map(([key, value]) => [key, tx(value as string)]),
+    ),
+    items: source.items.map((item) => ({ title: tx(item.title), body: tx(item.body) })),
+    practicalBody: source.practicalBody.map(tx),
+  } as typeof source;
+  const themes = THEMES[lang].map((theme) => ({
+    ...theme,
+    title: tx(theme.title),
+    body: tx(theme.body),
+    alt: tx(theme.alt),
+  }));
   return (
     <div className="min-h-screen bg-background">
       <NavHeader />
@@ -295,7 +311,7 @@ export function EducationPage() {
         <section className="mt-12">
           <h2 className="font-serif text-2xl text-foreground">{c.themesTitle}</h2>
           <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {THEMES[lang].map((theme) => (
+            {themes.map((theme) => (
               <article
                 key={theme.title}
                 className="rounded-2xl border border-border bg-[color:var(--color-cream)] p-4"
@@ -326,8 +342,16 @@ export function EducationPage() {
 }
 
 export function EducationBookingPage() {
-  const { lang } = useT();
-  const c = COPY[lang];
+  const { lang, tx } = useT();
+  const source = COPY[lang];
+  const c = {
+    ...source,
+    ...Object.fromEntries(
+      Object.entries(source)
+        .filter(([, value]) => typeof value === "string")
+        .map(([key, value]) => [key, tx(value as string)]),
+    ),
+  } as typeof source;
   return (
     <div className="min-h-screen bg-background">
       <NavHeader />
