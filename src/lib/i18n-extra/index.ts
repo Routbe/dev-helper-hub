@@ -57,3 +57,12 @@ export function translatePhrase(extra: ExtraLang | null | undefined, en: string)
   if (!extra) return en;
   return EXTRA_PHRASES[extra]?.[en] ?? en;
 }
+
+/** Past `tx` recursief toe op alle teksten in een object of lijst. */
+export function deepTx<T>(tx: (s: string) => string, v: T): T {
+  if (typeof v === "string") return tx(v) as T;
+  if (Array.isArray(v)) return v.map((x) => deepTx(tx, x)) as T;
+  if (v && typeof v === "object")
+    return Object.fromEntries(Object.entries(v).map(([k, x]) => [k, deepTx(tx, x)])) as T;
+  return v;
+}
