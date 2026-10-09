@@ -6,7 +6,7 @@ import { createServerFn } from "@tanstack/react-start";
 import { z } from "zod";
 import { requireAuth } from "@/lib/auth-middleware";
 
-export type IdentityProviderId = "google" | "github" | "mastodon" | "bluesky";
+export type IdentityProviderId = "google" | "github" | "mastodon" | "bluesky" | "rout";
 
 export type MyIdentities = {
   providers: IdentityProviderId[];

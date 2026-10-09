@@ -110,6 +110,7 @@ import { Route as ApiAuthGoogleRouteImport } from './routes/api/auth/google'
 import { Route as ApiAuthMagicLinkRouteImport } from './routes/api/auth/magic-link'
 import { Route as ApiAuthMastodonRouteImport } from './routes/api/auth/mastodon'
 import { Route as ApiAuthProvidersRouteImport } from './routes/api/auth/providers'
+import { Route as ApiAuthRoutRouteImport } from './routes/api/auth/rout'
 import { Route as ApiChatEmailRouteImport } from './routes/api/chat/email'
 import { Route as ApiCheckoutCreateSessionRouteImport } from './routes/api/checkout/create-session'
 import { Route as ApiDevHealthRouteImport } from './routes/api/dev/health'
@@ -134,6 +135,7 @@ import { Route as ApiV1AnimalsRouteImport } from './routes/api/v1/animals'
 import { Route as ApiV1BookingsRouteImport } from './routes/api/v1/bookings'
 import { Route as ApiV1ProductsRouteImport } from './routes/api/v1/products'
 import { Route as ApiWebhooksStripeRouteImport } from './routes/api/webhooks/stripe'
+import { Route as AuthCallbackRoutRouteImport } from './routes/auth_.callback.rout'
 import { Route as AuthenticatedPortaalLangSlugRouteImport } from './routes/_authenticated/portaal.$lang.$slug'
 import { Route as ApiAdminCoPilotUndoRouteImport } from './routes/api/admin/co-pilot.undo'
 import { Route as ApiAuthCallbackBlueskyRouteImport } from './routes/api/auth/callback/bluesky'
@@ -141,6 +143,7 @@ import { Route as ApiAuthCallbackGithubRouteImport } from './routes/api/auth/cal
 import { Route as ApiAuthCallbackGoogleRouteImport } from './routes/api/auth/callback/google'
 import { Route as ApiAuthCallbackMastodonRouteImport } from './routes/api/auth/callback/mastodon'
 import { Route as ApiAuthLoginProviderRouteImport } from './routes/api/auth/login/$provider'
+import { Route as ApiAuthRoutLogoutRouteImport } from './routes/api/auth/rout.logout'
 import { Route as ApiMediaScalewayDeleteRouteImport } from './routes/api/media/scaleway/delete'
 import { Route as ApiMediaScalewayListRouteImport } from './routes/api/media/scaleway/list'
 import { Route as ApiMediaScalewaySimilarRouteImport } from './routes/api/media/scaleway/similar'
@@ -668,6 +671,11 @@ const ApiAuthProvidersRoute = ApiAuthProvidersRouteImport.update({
   path: '/api/auth/providers',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiAuthRoutRoute = ApiAuthRoutRouteImport.update({
+  id: '/api/auth/rout',
+  path: '/api/auth/rout',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiChatEmailRoute = ApiChatEmailRouteImport.update({
   id: '/email',
   path: '/email',
@@ -794,6 +802,11 @@ const ApiWebhooksStripeRoute = ApiWebhooksStripeRouteImport.update({
   path: '/api/webhooks/stripe',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthCallbackRoutRoute = AuthCallbackRoutRouteImport.update({
+  id: '/auth_/callback/rout',
+  path: '/auth/callback/rout',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AuthenticatedPortaalLangSlugRoute =
   AuthenticatedPortaalLangSlugRouteImport.update({
     id: '/portaal/$lang/$slug',
@@ -829,6 +842,11 @@ const ApiAuthLoginProviderRoute = ApiAuthLoginProviderRouteImport.update({
   id: '/api/auth/login/$provider',
   path: '/api/auth/login/$provider',
   getParentRoute: () => rootRouteImport,
+} as any)
+const ApiAuthRoutLogoutRoute = ApiAuthRoutLogoutRouteImport.update({
+  id: '/logout',
+  path: '/logout',
+  getParentRoute: () => ApiAuthRoutRoute,
 } as any)
 const ApiMediaScalewayDeleteRoute = ApiMediaScalewayDeleteRouteImport.update({
   id: '/api/media/scaleway/delete',
@@ -1020,6 +1038,7 @@ export interface FileRoutesByFullPath {
   '/api/auth/magic-link': typeof ApiAuthMagicLinkRoute
   '/api/auth/mastodon': typeof ApiAuthMastodonRoute
   '/api/auth/providers': typeof ApiAuthProvidersRoute
+  '/api/auth/rout': typeof ApiAuthRoutRouteWithChildren
   '/api/chat/email': typeof ApiChatEmailRoute
   '/api/checkout/create-session': typeof ApiCheckoutCreateSessionRoute
   '/api/dev/health': typeof ApiDevHealthRoute
@@ -1044,6 +1063,7 @@ export interface FileRoutesByFullPath {
   '/api/v1/bookings': typeof ApiV1BookingsRouteWithChildren
   '/api/v1/products': typeof ApiV1ProductsRouteWithChildren
   '/api/webhooks/stripe': typeof ApiWebhooksStripeRoute
+  '/auth/callback/rout': typeof AuthCallbackRoutRoute
   '/portaal/$lang/$slug': typeof AuthenticatedPortaalLangSlugRoute
   '/api/admin/co-pilot/undo': typeof ApiAdminCoPilotUndoRoute
   '/api/auth/callback/bluesky': typeof ApiAuthCallbackBlueskyRoute
@@ -1051,6 +1071,7 @@ export interface FileRoutesByFullPath {
   '/api/auth/callback/google': typeof ApiAuthCallbackGoogleRoute
   '/api/auth/callback/mastodon': typeof ApiAuthCallbackMastodonRoute
   '/api/auth/login/$provider': typeof ApiAuthLoginProviderRoute
+  '/api/auth/rout/logout': typeof ApiAuthRoutLogoutRoute
   '/api/media/scaleway/delete': typeof ApiMediaScalewayDeleteRoute
   '/api/media/scaleway/list': typeof ApiMediaScalewayListRoute
   '/api/media/scaleway/similar': typeof ApiMediaScalewaySimilarRoute
@@ -1167,6 +1188,7 @@ export interface FileRoutesByTo {
   '/api/auth/magic-link': typeof ApiAuthMagicLinkRoute
   '/api/auth/mastodon': typeof ApiAuthMastodonRoute
   '/api/auth/providers': typeof ApiAuthProvidersRoute
+  '/api/auth/rout': typeof ApiAuthRoutRouteWithChildren
   '/api/chat/email': typeof ApiChatEmailRoute
   '/api/checkout/create-session': typeof ApiCheckoutCreateSessionRoute
   '/api/dev/health': typeof ApiDevHealthRoute
@@ -1191,6 +1213,7 @@ export interface FileRoutesByTo {
   '/api/v1/bookings': typeof ApiV1BookingsRouteWithChildren
   '/api/v1/products': typeof ApiV1ProductsRouteWithChildren
   '/api/webhooks/stripe': typeof ApiWebhooksStripeRoute
+  '/auth/callback/rout': typeof AuthCallbackRoutRoute
   '/portaal/$lang/$slug': typeof AuthenticatedPortaalLangSlugRoute
   '/api/admin/co-pilot/undo': typeof ApiAdminCoPilotUndoRoute
   '/api/auth/callback/bluesky': typeof ApiAuthCallbackBlueskyRoute
@@ -1198,6 +1221,7 @@ export interface FileRoutesByTo {
   '/api/auth/callback/google': typeof ApiAuthCallbackGoogleRoute
   '/api/auth/callback/mastodon': typeof ApiAuthCallbackMastodonRoute
   '/api/auth/login/$provider': typeof ApiAuthLoginProviderRoute
+  '/api/auth/rout/logout': typeof ApiAuthRoutLogoutRoute
   '/api/media/scaleway/delete': typeof ApiMediaScalewayDeleteRoute
   '/api/media/scaleway/list': typeof ApiMediaScalewayListRoute
   '/api/media/scaleway/similar': typeof ApiMediaScalewaySimilarRoute
@@ -1319,6 +1343,7 @@ export interface FileRoutesById {
   '/api/auth/magic-link': typeof ApiAuthMagicLinkRoute
   '/api/auth/mastodon': typeof ApiAuthMastodonRoute
   '/api/auth/providers': typeof ApiAuthProvidersRoute
+  '/api/auth/rout': typeof ApiAuthRoutRouteWithChildren
   '/api/chat/email': typeof ApiChatEmailRoute
   '/api/checkout/create-session': typeof ApiCheckoutCreateSessionRoute
   '/api/dev/health': typeof ApiDevHealthRoute
@@ -1343,6 +1368,7 @@ export interface FileRoutesById {
   '/api/v1/bookings': typeof ApiV1BookingsRouteWithChildren
   '/api/v1/products': typeof ApiV1ProductsRouteWithChildren
   '/api/webhooks/stripe': typeof ApiWebhooksStripeRoute
+  '/auth_/callback/rout': typeof AuthCallbackRoutRoute
   '/_authenticated/portaal/$lang/$slug': typeof AuthenticatedPortaalLangSlugRoute
   '/api/admin/co-pilot/undo': typeof ApiAdminCoPilotUndoRoute
   '/api/auth/callback/bluesky': typeof ApiAuthCallbackBlueskyRoute
@@ -1350,6 +1376,7 @@ export interface FileRoutesById {
   '/api/auth/callback/google': typeof ApiAuthCallbackGoogleRoute
   '/api/auth/callback/mastodon': typeof ApiAuthCallbackMastodonRoute
   '/api/auth/login/$provider': typeof ApiAuthLoginProviderRoute
+  '/api/auth/rout/logout': typeof ApiAuthRoutLogoutRoute
   '/api/media/scaleway/delete': typeof ApiMediaScalewayDeleteRoute
   '/api/media/scaleway/list': typeof ApiMediaScalewayListRoute
   '/api/media/scaleway/similar': typeof ApiMediaScalewaySimilarRoute
@@ -1471,6 +1498,7 @@ export interface FileRouteTypes {
     | '/api/auth/magic-link'
     | '/api/auth/mastodon'
     | '/api/auth/providers'
+    | '/api/auth/rout'
     | '/api/chat/email'
     | '/api/checkout/create-session'
     | '/api/dev/health'
@@ -1495,6 +1523,7 @@ export interface FileRouteTypes {
     | '/api/v1/bookings'
     | '/api/v1/products'
     | '/api/webhooks/stripe'
+    | '/auth/callback/rout'
     | '/portaal/$lang/$slug'
     | '/api/admin/co-pilot/undo'
     | '/api/auth/callback/bluesky'
@@ -1502,6 +1531,7 @@ export interface FileRouteTypes {
     | '/api/auth/callback/google'
     | '/api/auth/callback/mastodon'
     | '/api/auth/login/$provider'
+    | '/api/auth/rout/logout'
     | '/api/media/scaleway/delete'
     | '/api/media/scaleway/list'
     | '/api/media/scaleway/similar'
@@ -1618,6 +1648,7 @@ export interface FileRouteTypes {
     | '/api/auth/magic-link'
     | '/api/auth/mastodon'
     | '/api/auth/providers'
+    | '/api/auth/rout'
     | '/api/chat/email'
     | '/api/checkout/create-session'
     | '/api/dev/health'
@@ -1642,6 +1673,7 @@ export interface FileRouteTypes {
     | '/api/v1/bookings'
     | '/api/v1/products'
     | '/api/webhooks/stripe'
+    | '/auth/callback/rout'
     | '/portaal/$lang/$slug'
     | '/api/admin/co-pilot/undo'
     | '/api/auth/callback/bluesky'
@@ -1649,6 +1681,7 @@ export interface FileRouteTypes {
     | '/api/auth/callback/google'
     | '/api/auth/callback/mastodon'
     | '/api/auth/login/$provider'
+    | '/api/auth/rout/logout'
     | '/api/media/scaleway/delete'
     | '/api/media/scaleway/list'
     | '/api/media/scaleway/similar'
@@ -1769,6 +1802,7 @@ export interface FileRouteTypes {
     | '/api/auth/magic-link'
     | '/api/auth/mastodon'
     | '/api/auth/providers'
+    | '/api/auth/rout'
     | '/api/chat/email'
     | '/api/checkout/create-session'
     | '/api/dev/health'
@@ -1793,6 +1827,7 @@ export interface FileRouteTypes {
     | '/api/v1/bookings'
     | '/api/v1/products'
     | '/api/webhooks/stripe'
+    | '/auth_/callback/rout'
     | '/_authenticated/portaal/$lang/$slug'
     | '/api/admin/co-pilot/undo'
     | '/api/auth/callback/bluesky'
@@ -1800,6 +1835,7 @@ export interface FileRouteTypes {
     | '/api/auth/callback/google'
     | '/api/auth/callback/mastodon'
     | '/api/auth/login/$provider'
+    | '/api/auth/rout/logout'
     | '/api/media/scaleway/delete'
     | '/api/media/scaleway/list'
     | '/api/media/scaleway/similar'
@@ -1900,6 +1936,7 @@ export interface RootRouteChildren {
   ApiAuthMagicLinkRoute: typeof ApiAuthMagicLinkRoute
   ApiAuthMastodonRoute: typeof ApiAuthMastodonRoute
   ApiAuthProvidersRoute: typeof ApiAuthProvidersRoute
+  ApiAuthRoutRoute: typeof ApiAuthRoutRouteWithChildren
   ApiCheckoutCreateSessionRoute: typeof ApiCheckoutCreateSessionRoute
   ApiDevHealthRoute: typeof ApiDevHealthRoute
   ApiDevRunMigrationsRoute: typeof ApiDevRunMigrationsRoute
@@ -1923,6 +1960,7 @@ export interface RootRouteChildren {
   ApiV1BookingsRoute: typeof ApiV1BookingsRouteWithChildren
   ApiV1ProductsRoute: typeof ApiV1ProductsRouteWithChildren
   ApiWebhooksStripeRoute: typeof ApiWebhooksStripeRoute
+  AuthCallbackRoutRoute: typeof AuthCallbackRoutRoute
   ApiAuthCallbackBlueskyRoute: typeof ApiAuthCallbackBlueskyRoute
   ApiAuthCallbackGithubRoute: typeof ApiAuthCallbackGithubRoute
   ApiAuthCallbackGoogleRoute: typeof ApiAuthCallbackGoogleRoute
@@ -2654,6 +2692,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiAuthProvidersRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/auth/rout': {
+      id: '/api/auth/rout'
+      path: '/api/auth/rout'
+      fullPath: '/api/auth/rout'
+      preLoaderRoute: typeof ApiAuthRoutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/chat/email': {
       id: '/api/chat/email'
       path: '/email'
@@ -2822,6 +2867,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiWebhooksStripeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/auth_/callback/rout': {
+      id: '/auth_/callback/rout'
+      path: '/auth/callback/rout'
+      fullPath: '/auth/callback/rout'
+      preLoaderRoute: typeof AuthCallbackRoutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/_authenticated/portaal/$lang/$slug': {
       id: '/_authenticated/portaal/$lang/$slug'
       path: '/portaal/$lang/$slug'
@@ -2870,6 +2922,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/api/auth/login/$provider'
       preLoaderRoute: typeof ApiAuthLoginProviderRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/api/auth/rout/logout': {
+      id: '/api/auth/rout/logout'
+      path: '/logout'
+      fullPath: '/api/auth/rout/logout'
+      preLoaderRoute: typeof ApiAuthRoutLogoutRouteImport
+      parentRoute: typeof ApiAuthRoutRoute
     }
     '/api/media/scaleway/delete': {
       id: '/api/media/scaleway/delete'
@@ -3093,6 +3152,18 @@ const ApiAdminCoPilotRouteWithChildren = ApiAdminCoPilotRoute._addFileChildren(
   ApiAdminCoPilotRouteChildren,
 )
 
+interface ApiAuthRoutRouteChildren {
+  ApiAuthRoutLogoutRoute: typeof ApiAuthRoutLogoutRoute
+}
+
+const ApiAuthRoutRouteChildren: ApiAuthRoutRouteChildren = {
+  ApiAuthRoutLogoutRoute: ApiAuthRoutLogoutRoute,
+}
+
+const ApiAuthRoutRouteWithChildren = ApiAuthRoutRoute._addFileChildren(
+  ApiAuthRoutRouteChildren,
+)
+
 interface ApiV1BookingsRouteChildren {
   ApiV1BookingsIdCheckinRoute: typeof ApiV1BookingsIdCheckinRoute
 }
@@ -3198,6 +3269,7 @@ const rootRouteChildren: RootRouteChildren = {
   ApiAuthMagicLinkRoute: ApiAuthMagicLinkRoute,
   ApiAuthMastodonRoute: ApiAuthMastodonRoute,
   ApiAuthProvidersRoute: ApiAuthProvidersRoute,
+  ApiAuthRoutRoute: ApiAuthRoutRouteWithChildren,
   ApiCheckoutCreateSessionRoute: ApiCheckoutCreateSessionRoute,
   ApiDevHealthRoute: ApiDevHealthRoute,
   ApiDevRunMigrationsRoute: ApiDevRunMigrationsRoute,
@@ -3221,6 +3293,7 @@ const rootRouteChildren: RootRouteChildren = {
   ApiV1BookingsRoute: ApiV1BookingsRouteWithChildren,
   ApiV1ProductsRoute: ApiV1ProductsRouteWithChildren,
   ApiWebhooksStripeRoute: ApiWebhooksStripeRoute,
+  AuthCallbackRoutRoute: AuthCallbackRoutRoute,
   ApiAuthCallbackBlueskyRoute: ApiAuthCallbackBlueskyRoute,
   ApiAuthCallbackGithubRoute: ApiAuthCallbackGithubRoute,
   ApiAuthCallbackGoogleRoute: ApiAuthCallbackGoogleRoute,

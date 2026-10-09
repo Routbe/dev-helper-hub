@@ -8,7 +8,7 @@ import { db, hasDatabase } from "./neon.server";
 import { ensureAuthSchema, normalizeEmail, type AppUser } from "./local-auth.server";
 import { authOrigin } from "./google-oauth.server";
 
-export type SocialProvider = "google" | "github" | "mastodon" | "bluesky";
+export type SocialProvider = "google" | "github" | "mastodon" | "bluesky" | "rout";
 
 export type SocialProfile = {
   email: string;

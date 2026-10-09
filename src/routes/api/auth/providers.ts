@@ -53,6 +53,14 @@ export const Route = createFileRoute("/api/auth/providers")({
             startPath: "/api/auth/login/bluesky",
             callbackUrl: `${origin}/api/auth/callback/bluesky`,
           },
+          {
+            // ROUT (OpenID Connect): vaste client_id, secret enkel op de server.
+            id: "rout" as const,
+            configured: db && env("ROUT_CLIENT_SECRET"),
+            missing: ["ROUT_CLIENT_SECRET"].filter((n) => !env(n)),
+            startPath: "/api/auth/login/rout",
+            callbackUrl: process.env["ROUT_REDIRECT_URI"] ?? `${origin}/auth/callback/rout`,
+          },
         ];
 
         return new Response(

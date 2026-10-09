@@ -89,3 +89,12 @@ export function BlueskyIcon({ className = BASE }: IconProps) {
     </svg>
   );
 }
+
+export function RoutIcon({ className = BASE }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <circle cx="12" cy="12" r="10" fill="currentColor" />
+      <text x="12" y="16" textAnchor="middle" fontSize="11" fontWeight="700" fill="var(--background, #fff)" fontFamily="system-ui, sans-serif">R</text>
+    </svg>
+  );
+}

@@ -160,8 +160,19 @@ export async function completeSocialLogin(
   profile: SocialProfile,
   next: string,
 ): Promise<Response> {
-  const origin = siteOrigin(request);
   const { user, role } = await upsertSocialUser(profile, provider);
+  return issueSessionRedirect(request, user, role, next, OAUTH_STATE_COOKIE);
+}
+
+/** Ondertekent de sessie, zet de cookie en stuurt door (gedeeld door alle aanbieders). */
+export async function issueSessionRedirect(
+  request: Request,
+  user: import("./local-auth.server").AppUser,
+  role: string,
+  next: string,
+  clearCookie: string,
+): Promise<Response> {
+  const origin = siteOrigin(request);
   const effectiveRole = await resolveRole(user.email, role);
 
   const auth = await import("./local-auth.server");
@@ -187,7 +198,7 @@ export async function completeSocialLogin(
     "Set-Cookie",
     cookieHeader(SESSION_COOKIE, sessionToken, { maxAge: 30 * 24 * 3600, secure }),
   );
-  headers.append("Set-Cookie", cookieHeader(OAUTH_STATE_COOKIE, "", { maxAge: 0, secure }));
+  headers.append("Set-Cookie", cookieHeader(clearCookie, "", { maxAge: 0, secure }));
   return new Response(null, { status: 302, headers });
 }
 

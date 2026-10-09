@@ -9,9 +9,9 @@
 import { db, hasDatabase } from "./neon.server";
 import { ensureAuthSchema } from "./local-auth.server";
 
-export type IdentityProvider = "google" | "github" | "mastodon" | "bluesky";
+export type IdentityProvider = "google" | "github" | "mastodon" | "bluesky" | "rout";
 
-export const IDENTITY_PROVIDERS: IdentityProvider[] = ["google", "github", "mastodon", "bluesky"];
+export const IDENTITY_PROVIDERS: IdentityProvider[] = ["google", "github", "mastodon", "bluesky", "rout"];
 
 let ready: Promise<boolean> | null = null;
 
