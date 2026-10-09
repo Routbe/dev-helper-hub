@@ -233,13 +233,28 @@ export function LoginPage() {
             ? "Mastodon"
             : search.provider === "bluesky"
               ? "Bluesky"
-              : null;
+              : search.provider === "rout" || reason.startsWith("rout-")
+                ? "ROUT"
+                : null;
     const cancelled =
       code === "access_denied" ||
       code.includes("cancel") ||
       reason.endsWith("-geweigerd") ||
       reason.includes("access_denied");
 
+    if (reason === "rout-email-in-gebruik") {
+      toast.error(
+        "Er bestaat al een account met dit e-mailadres. Bevestig je e-mailadres bij ROUT of meld je eerst aan en koppel ROUT daarna in je instellingen.",
+      );
+    } else if (reason === "rout-email-ontbreekt") {
+      toast.error("ROUT gaf geen e-mailadres door. Sta het delen van je e-mailadres toe en probeer opnieuw.");
+    } else if (reason === "rout-login-nodig") {
+      toast.error("Meld je opnieuw aan bij ROUT om verder te gaan.");
+    } else if (reason === "rout-onbereikbaar") {
+      toast.error("ROUT is even niet bereikbaar. Probeer het straks opnieuw.");
+    } else if (reason === "rout-state") {
+      toast.error("De aanmelding is verlopen. Probeer opnieuw met ROUT.");
+    } else
     toast.error(
       cancelled
         ? c.oauthCancelled
@@ -259,6 +274,24 @@ export function LoginPage() {
   useEffect(() => {
     setPasskeySupported(isPasskeySupported());
   }, []);
+
+  // Stil aanmelden met ROUT (prompt=none), één keer per browsersessie.
+  // Bij login_required komen we terug met ?rout=login_required en blijft de knop staan.
+  useEffect(() => {
+    if (authLoading || isLoggedIn || search.error) return;
+    if (!configuredProviders.includes("rout")) return;
+    const url = new URL(window.location.href);
+    if (url.searchParams.get("rout") === "login_required") {
+      sessionStorage.setItem("rout_silent_tried", "1");
+      url.searchParams.delete("rout");
+      window.history.replaceState(null, "", url.toString());
+      return;
+    }
+    if (sessionStorage.getItem("rout_silent_tried")) return;
+    sessionStorage.setItem("rout_silent_tried", "1");
+    const next = url.pathname + url.search;
+    window.location.assign(`/api/auth/rout?silent=1&next=${encodeURIComponent(next)}`);
+  }, [authLoading, isLoggedIn, configuredProviders, search.error]);
 
   async function afterAuth() {
     await router.invalidate();

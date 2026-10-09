@@ -38,7 +38,7 @@ export const Route = createFileRoute("/auth_/callback/rout")({
           if (attempt.link) {
             return await flow.completeIdentityLink(
               request,
-              "rout" as never,
+              "rout",
               {
                 email: claims.email ?? "",
                 name: claims.name ?? null,
