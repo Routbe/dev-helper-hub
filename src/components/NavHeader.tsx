@@ -105,11 +105,11 @@ export function NavHeader() {
   const profileBtnRef = useRef<HTMLButtonElement | null>(null);
   const profileMenuRef = useRef<HTMLDivElement | null>(null);
   const menuBtnRef = useRef<HTMLButtonElement | null>(null);
-  const { t, lang, tx } = useT();
+  const { t, lang, tx, extra } = useT();
   const c0 = COPY[lang];
   const c = {
     ...c0,
-    hello: (name: string) => (tx("Sign out") !== "Sign out" ? `Hallo, ${name}` : c0.hello(name)),
+    hello: (name: string) => (lang === "en" && extra === "de" ? `Hallo, ${name}` : c0.hello(name)),
     ...Object.fromEntries(
       Object.entries(c0)
         .filter(([, v]) => typeof v === "string")
