@@ -26,6 +26,7 @@ import { neonSupabaseCompat as supabase } from "@/lib/neon-auth-compat";
 import { AddressAutocomplete } from "@/components/AddressAutocomplete";
 import { SecuritySettings } from "@/components/account/SecuritySettings";
 import { PublicProfileCard } from "@/components/account/PublicProfileCard";
+import { getMyProfileSettings } from "@/lib/public-profile.functions";
 import { HoefjesPad } from "@/components/HoefjesPad";
 import { EmailField } from "@/components/account/EmailField";
 import { lovable } from "@/integrations/lovable/index";
@@ -424,6 +425,18 @@ export function AccountPage() {
   const navigate = useNavigate();
   const search = useSearch({ strict: false }) as z.infer<typeof searchSchema>;
   const tab = !search.tab || search.tab === "badges" ? "hoefjes" : search.tab;
+  const getProfileFn = useServerFn(getMyProfileSettings);
+
+  // Oude link ?tab=badges → badges staan nu op het openbare profiel.
+  useEffect(() => {
+    if (loading || !isLoggedIn || search.tab !== "badges") return;
+    void getProfileFn()
+      .then((p) => {
+        if (p?.public_id) window.location.replace(`/${lang}/u/${p.public_id}`);
+      })
+      .catch(() => undefined);
+  }, [loading, isLoggedIn, search.tab, lang, getProfileFn]);
+
 
   useEffect(() => {
     if (!loading && !isLoggedIn) {
