@@ -15,7 +15,7 @@ import { isCanonicalHost } from "./site-url";
 
 /* --------------------------------- Merk ---------------------------------- */
 
-export const BRAND_NAME = "Maxilien";
+export const BRAND_NAME = "Maximilien";
 export const BRAND_TAGLINE: Record<MailLang, string> = {
   nl: "Stadsboerderij · Brussel",
   fr: "Ferme urbaine · Bruxelles",
@@ -33,7 +33,7 @@ type OrgInfo = {
 };
 
 export const ORG_DEFAULTS = {
-  legalName: "Maxilien VZW / ASBL",
+  legalName: "Maximilien VZW / ASBL",
   address: "Schipperijkaai 2",
   city: "1000 Brussel / Bruxelles",
   phone: "+32 2 201 56 09",

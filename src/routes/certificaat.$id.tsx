@@ -208,8 +208,8 @@ function CertificaatPage() {
     "https://www.linkedin.com/profile/add?" +
     new URLSearchParams({
       startTask: "CERTIFICATION_NAME",
-      name: `${academyLabel} Academy — Maxilien`,
-      organizationName: "Maxilien",
+      name: `${academyLabel} Academy — Maximilien`,
+      organizationName: "Maximilien",
       issueYear: String(dt.getFullYear()),
       issueMonth: String(dt.getMonth() + 1),
       certUrl: verifyUrl,
@@ -242,7 +242,7 @@ function CertificaatPage() {
         issuer: {
           type: "Profile",
           id: CANONICAL_SITE_URL,
-          name: "Maxilien",
+          name: "Maximilien",
           url: CANONICAL_SITE_URL,
         },
       },

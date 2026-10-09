@@ -12,9 +12,9 @@ export type { Dict, Entry };
 const dict: Dict = {
   // Brand & shell
   "app.name": {
-    fr: "Maxilien",
-    nl: "Maxilien",
-    en: "Maxilien",
+    fr: "Maximilien",
+    nl: "Maximilien",
+    en: "Maximilien",
   },
   "app.brand": { fr: "Maximilien Manager", nl: "Maximilien Manager", en: "Maximilien Manager" },
   "app.portal": { fr: "Portail de gestion", nl: "Beheerportaal", en: "Management portal" },

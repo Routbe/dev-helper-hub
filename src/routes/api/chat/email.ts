@@ -15,9 +15,9 @@ type Body = {
 };
 
 const SUBJECT: Record<Lang, string> = {
-  nl: "Jouw overzicht van Maxilien",
-  fr: "Votre récapitulatif de Maxilien",
-  en: "Your overview from Maxilien",
+  nl: "Jouw overzicht van Maximilien",
+  fr: "Votre récapitulatif de Maximilien",
+  en: "Your overview from Maximilien",
 };
 
 const INTRO: Record<Lang, string> = {
@@ -27,9 +27,9 @@ const INTRO: Record<Lang, string> = {
 };
 
 const FOOTER: Record<Lang, string> = {
-  nl: "Stadsboerderij Maxilien · Schipperijkaai 2, 1000 Brussel · gratis toegang",
-  fr: "Ferme urbaine Maxilien · Quai du Batelage 2, 1000 Bruxelles · entrée gratuite",
-  en: "City farm Maxilien · Quai du Batelage 2, 1000 Brussels · free entry",
+  nl: "Stadsboerderij Maximilien · Schipperijkaai 2, 1000 Brussel · gratis toegang",
+  fr: "Ferme urbaine Maximilien · Quai du Batelage 2, 1000 Bruxelles · entrée gratuite",
+  en: "City farm Maximilien · Quai du Batelage 2, 1000 Brussels · free entry",
 };
 
 const MAX_CONTENT = 8_000;

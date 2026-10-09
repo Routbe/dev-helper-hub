@@ -93,14 +93,15 @@ const COPY: Record<
 };
 
 export function SiteFooter() {
-  const { t, lang } = useT();
+  const { t, lang, tx } = useT();
   // Contactgegevens uit het portaal, met de vaste waarden als vangnet.
   const site = useSiteContact();
   const contactEmail = site.email || "contact@maximilien.brussels";
   const phoneDisplay = site.phone || PHONE;
   const phoneHref = phoneDisplay.replace(/[^\d+]/g, "");
   const addressLine = contactAddressLine(site);
-  const c = COPY[lang];
+  const c0 = COPY[lang];
+  const c = { supportedBy: tx(c0.supportedBy), city: tx(c0.city), and: tx(c0.and), design: tx(c0.design) };
   return (
     <footer className="relative z-0 mt-8 border-t border-border bg-[color:var(--surface-page)]/50 overflow-x-hidden">
       <div className="mx-auto max-w-6xl px-4 py-14 md:px-8">
@@ -129,7 +130,7 @@ export function SiteFooter() {
             {/* Kolom: ontdekken */}
             <div className="min-w-0">
               <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-foreground">
-                {DISCOVER_TITLE[lang]}
+                {tx(DISCOVER_TITLE[lang])}
               </p>
               <nav className="mt-3 flex flex-col gap-2 text-sm text-foreground/90">
                 <LocalLink to={pathFor("about", lang)} className={LINK}>
@@ -145,16 +146,16 @@ export function SiteFooter() {
                   {t("nav.support")}
                 </LocalLink>
                 <LocalLink to={pathFor("compost", lang)} className={LINK}>
-                  {COMPOST_LABEL[lang]}
+                  {tx(COMPOST_LABEL[lang])}
                 </LocalLink>
                 <LocalLink to={pathFor("social", lang)} className={LINK}>
-                  {MEDIA_LABEL[lang]}
+                  {tx(MEDIA_LABEL[lang])}
                 </LocalLink>
                 <LocalLink to={pathFor("events", lang)} className={LINK}>
-                  {{ nl: "Kalender", fr: "Agenda", en: "Calendar" }[lang]}
+                  {tx({ nl: "Kalender", fr: "Agenda", en: "Calendar" }[lang])}
                 </LocalLink>
                 <LocalLink to={pathFor("fairtech", lang)} className={LINK}>
-                  {{ nl: "Fair & Open Tech", fr: "Fair & Open Tech", en: "Fair & Open Tech" }[lang]}
+                  {tx({ nl: "Fair & Open Tech", fr: "Fair & Open Tech", en: "Fair & Open Tech" }[lang])}
                 </LocalLink>
               </nav>
             </div>
@@ -162,7 +163,7 @@ export function SiteFooter() {
             {/* Kolom: boeken & huren */}
             <div className="min-w-0">
               <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-foreground">
-                {BOOK_TITLE[lang]}
+                {tx(BOOK_TITLE[lang])}
               </p>
               <nav className="mt-3 flex flex-col gap-2 text-sm text-foreground/90">
                 {(
@@ -175,11 +176,11 @@ export function SiteFooter() {
                   ] as const
                 ).map(([key, label]) => (
                   <LocalLink key={key} to={pathFor(key, lang)} className={LINK}>
-                    {label[lang]}
+                    {tx(label[lang])}
                   </LocalLink>
                 ))}
                 <Link to="/boeking" className={LINK}>
-                  {BOOK_NOW[lang]}
+                  {tx(BOOK_NOW[lang])}
                 </Link>
               </nav>
             </div>
@@ -206,10 +207,10 @@ export function SiteFooter() {
                   {t("footer.contactLink")}
                 </LocalLink>
                 <LocalLink to={pathFor("faq", lang)} className={LINK}>
-                  {{ nl: "Veelgestelde vragen", fr: "Questions fréquentes", en: "FAQ" }[lang]}
+                  {tx({ nl: "Veelgestelde vragen", fr: "Questions fréquentes", en: "FAQ" }[lang])}
                 </LocalLink>
                 <LocalLink to={pathFor("press", lang)} className={LINK}>
-                  {{ nl: "Pers & mediakit", fr: "Presse & kit média", en: "Press & media kit" }[lang]}
+                  {tx({ nl: "Pers & mediakit", fr: "Presse & kit média", en: "Press & media kit" }[lang])}
                 </LocalLink>
               </nav>
             </div>
@@ -283,31 +284,31 @@ export function SiteFooter() {
       <div className="border-t border-border py-5 text-center text-[11px] text-foreground/90">
         <nav className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-5 gap-y-2 px-4">
           <LocalLink to={pathFor("privacy", lang)} className={LINK}>
-            {{ nl: "Privacybeleid", fr: "Politique de confidentialité", en: "Privacy policy" }[lang]}
+            {tx({ nl: "Privacybeleid", fr: "Politique de confidentialité", en: "Privacy policy" }[lang])}
           </LocalLink>
           <LocalLink to={pathFor("terms", lang)} className={LINK}>
-            {{ nl: "Algemene voorwaarden", fr: "Conditions générales", en: "Terms and conditions" }[lang]}
+            {tx({ nl: "Algemene voorwaarden", fr: "Conditions générales", en: "Terms and conditions" }[lang])}
           </LocalLink>
           <LocalLink to={pathFor("cookies", lang)} className={LINK}>
-            {{ nl: "Cookies", fr: "Cookies", en: "Cookies" }[lang]}
+            {tx({ nl: "Cookies", fr: "Cookies", en: "Cookies" }[lang])}
           </LocalLink>
           <LocalLink to={pathFor("legal", lang)} className={LINK}>
-            {{ nl: "Wettelijke vermeldingen", fr: "Mentions légales", en: "Legal notice" }[lang]}
+            {tx({ nl: "Wettelijke vermeldingen", fr: "Mentions légales", en: "Legal notice" }[lang])}
           </LocalLink>
           <LocalLink to={pathFor("status", lang)} className={LINK}>
-            {{ nl: "Status", fr: "Statut", en: "Status" }[lang]}
+            {tx({ nl: "Status", fr: "Statut", en: "Status" }[lang])}
           </LocalLink>
           <PwaInstallButton />
         </nav>
 
         {/* Statische copyrightregel — geen verborgen doorverwijzing naar het beheerportaal. */}
         <p className="mt-4 uppercase tracking-[0.25em]">
-          © 2026 Maxilien.{" "}
-          {{
+          © 2026 Maximilien.{" "}
+          {tx({
             nl: "Alle rechten voorbehouden.",
             fr: "Tous droits réservés.",
             en: "All rights reserved.",
-          }[lang]}
+          }[lang])}
         </p>
       </div>
 

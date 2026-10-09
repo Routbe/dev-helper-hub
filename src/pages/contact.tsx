@@ -30,7 +30,7 @@ import {
 const PHONE = "+3222015609";
 const PHONE_DISPLAY = "+32 2 201 56 09";
 const EMAIL = CONTACT_EMAIL;
-const ADDRESS_LINE1 = "Maxilien";
+const ADDRESS_LINE1 = "Maximilien";
 const ADDRESS_LINE2 = "Schipperijkaai 2 / Quai du Batelage 2";
 const ADDRESS_LINE3 = "1000 Brussel / Bruxelles";
 const ADDRESS_FULL = `${ADDRESS_LINE1}, ${ADDRESS_LINE2}, ${ADDRESS_LINE3}`;

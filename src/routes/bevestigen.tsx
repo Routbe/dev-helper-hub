@@ -11,7 +11,7 @@ const searchSchema = z.object({
   next: z.string().optional(),
 });
 
-const TITLE = "E-mailadres bevestigen — Maxilien";
+const TITLE = "E-mailadres bevestigen — Maximilien";
 const DESC = "Bevestig je e-mailadres of herstellink voor je account bij de stadsboerderij.";
 
 export const Route = createFileRoute("/bevestigen")({

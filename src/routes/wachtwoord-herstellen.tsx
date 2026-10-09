@@ -18,7 +18,7 @@ import { useServerFn } from "@tanstack/react-start";
 import { notifyPasswordChanged } from "@/lib/auth-email.functions";
 import { useT } from "@/lib/i18n";
 
-const TITLE = "Nieuw wachtwoord instellen — Maxilien";
+const TITLE = "Nieuw wachtwoord instellen — Maximilien";
 const DESC = "Stel een nieuw wachtwoord in voor je account bij de stadsboerderij.";
 
 export const Route = createFileRoute("/wachtwoord-herstellen")({

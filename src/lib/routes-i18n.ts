@@ -420,489 +420,489 @@ export const PAGE_META: Record<PageKey, Record<Lang, Meta>> = {
   },
   faq: {
     nl: {
-      title: "Veelgestelde vragen — Maxilien",
+      title: "Veelgestelde vragen — Maximilien",
       description:
         "Antwoorden over bezoeken, schoolanimaties, verjaardagen, stages, teambuilding, reserveren en betalen op de stadsboerderij.",
     },
     fr: {
-      title: "Questions fréquentes — Maxilien",
+      title: "Questions fréquentes — Maximilien",
       description:
         "Réponses sur les visites, animations scolaires, anniversaires, stages, teambuilding, réservations et paiements à la ferme urbaine.",
     },
     en: {
-      title: "Frequently asked questions — Maxilien",
+      title: "Frequently asked questions — Maximilien",
       description:
         "Answers about visits, school workshops, birthdays, camps, team building, bookings and payments at the urban farm.",
     },
   },
   transparency: {
     nl: {
-      title: "Transparantie — Maxilien",
+      title: "Transparantie — Maximilien",
       description:
-        "Subsidies, overheidsopdrachten, verloning, transparantierapport en jaarverslag van de vzw Maxilien.",
+        "Subsidies, overheidsopdrachten, verloning, transparantierapport en jaarverslag van de vzw Maximilien.",
     },
     fr: {
-      title: "Transparence — Maxilien",
+      title: "Transparence — Maximilien",
       description:
-        "Subventions, marchés publics, rémunérations, rapport transparence et rapport annuel de l'ASBL Maxilien.",
+        "Subventions, marchés publics, rémunérations, rapport transparence et rapport annuel de l'ASBL Maximilien.",
     },
     en: {
-      title: "Transparency — Maxilien",
+      title: "Transparency — Maximilien",
       description:
-        "Subsidies, public contracts, pay, transparency report and annual report of the non-profit Maxilien.",
+        "Subsidies, public contracts, pay, transparency report and annual report of the non-profit Maximilien.",
     },
   },
   legal: {
     nl: {
-      title: "Wettelijke vermeldingen — Maxilien",
+      title: "Wettelijke vermeldingen — Maximilien",
       description:
         "Uitgever, hosting, aansprakelijkheid, intellectuele eigendom en gebruiksvoorwaarden van de website van de stadsboerderij.",
     },
     fr: {
-      title: "Mentions légales — Maxilien",
+      title: "Mentions légales — Maximilien",
       description:
         "Éditeur, hébergement, responsabilité, propriété intellectuelle et conditions d'utilisation du site de la ferme urbaine.",
     },
     en: {
-      title: "Legal notice — Maxilien",
+      title: "Legal notice — Maximilien",
       description:
         "Publisher, hosting, liability, intellectual property and terms of use of the urban farm's website.",
     },
   },
   resources: {
     nl: {
-      title: "Documenten & downloads — Maxilien",
+      title: "Documenten & downloads — Maximilien",
       description:
         "Pedagogische fiches, moestuin- en compostgidsen, dierenfiches en de rapporten van de vzw om te downloaden.",
     },
     fr: {
-      title: "Ressources et téléchargements — Maxilien",
+      title: "Ressources et téléchargements — Maximilien",
       description:
         "Fiches pédagogiques, guides potager et compost, fiches animaux et rapports de l'ASBL à télécharger.",
     },
     en: {
-      title: "Resources and downloads — Maxilien",
+      title: "Resources and downloads — Maximilien",
       description:
         "Educational sheets, garden and compost guides, animal profiles and the non-profit's reports to download.",
     },
   },
   jobs: {
     nl: {
-      title: "Jobs & stages — Maxilien",
+      title: "Jobs & stages — Maximilien",
       description:
         "Openstaande vacatures, studentenstages in dierenverzorging, moestuin, imkerij en animatie, en spontaan solliciteren.",
     },
     fr: {
-      title: "Emploi et stages — Maxilien",
+      title: "Emploi et stages — Maximilien",
       description:
         "Offres d'emploi ouvertes, stages étudiants en soin animalier, maraîchage, apiculture et animation, et candidature spontanée.",
     },
     en: {
-      title: "Jobs and internships — Maxilien",
+      title: "Jobs and internships — Maximilien",
       description:
         "Open positions, student internships in animal care, gardening, beekeeping and activities, plus spontaneous applications.",
     },
   },
   volunteers: {
     nl: {
-      title: "Vrijwilliger worden — Maxilien",
+      title: "Vrijwilliger worden — Maximilien",
       description:
         "Word vrijwilliger op de stadsboerderij: projectbeheer en animatie of dierenverzorging. Engagement, taken en inschrijving.",
     },
     fr: {
-      title: "Devenir bénévole — Maxilien",
+      title: "Devenir bénévole — Maximilien",
       description:
         "Devenez bénévole à la ferme urbaine : gestion de projet et animation ou soin animalier. Engagement, missions et inscription.",
     },
     en: {
-      title: "Become a volunteer — Maxilien",
+      title: "Become a volunteer — Maximilien",
       description:
         "Volunteer at the urban farm: project management and activities, or animal care. Commitment, tasks and how to join.",
     },
   },
   events: {
     nl: {
-      title: "Kalender & evenementen — Maxilien",
+      title: "Kalender & evenementen — Maximilien",
       description:
         "Alle data van de stadsboerderij: vakantiestages, feesten, markten, workshops en buurtevenementen op één kalender.",
     },
     fr: {
-      title: "Agenda et événements — Maxilien",
+      title: "Agenda et événements — Maximilien",
       description:
         "Toutes les dates de la ferme urbaine : stages de vacances, fêtes, marchés, ateliers et événements de quartier.",
     },
     en: {
-      title: "Calendar and events — Maxilien",
+      title: "Calendar and events — Maximilien",
       description:
         "All the urban farm's dates: holiday camps, festivals, markets, workshops and neighbourhood events in one calendar.",
     },
   },
   home: {
     nl: {
-      title: "Maxilien — Stadsboerderij Brussel",
+      title: "Maximilien — Stadsboerderij Brussel",
       description:
         "Stadsboerderij aan het Maximiliaanpark: dieren ontmoeten, educatie, verpakkingsvrij winkelen en activiteiten in hartje Brussel.",
     },
     fr: {
-      title: "Maxilien — Ferme urbaine à Bruxelles",
+      title: "Maximilien — Ferme urbaine à Bruxelles",
       description:
         "Ferme urbaine au parc Maximilien : rencontrer les animaux, éducation, épicerie zéro déchet et activités au cœur de Bruxelles.",
     },
     en: {
-      title: "Maxilien — Urban farm in Brussels",
+      title: "Maximilien — Urban farm in Brussels",
       description:
         "Urban farm at Maximilien Park: meet the animals, education, packaging-free shop and activities in the heart of Brussels.",
     },
   },
   visit: {
     nl: {
-      title: "Bezoek & info — Maxilien",
+      title: "Bezoek & info — Maximilien",
       description:
         "Openingsuren, toegang, prijzen en bereikbaarheid met MIVB. Alles wat je moet weten voor je bezoek aan de stadsboerderij.",
     },
     fr: {
-      title: "Visite & infos — Maxilien",
+      title: "Visite & infos — Maximilien",
       description:
         "Horaires, accès, tarifs et transports STIB. Tout ce qu'il faut savoir avant votre visite à la ferme urbaine.",
     },
     en: {
-      title: "Visit & info — Maxilien",
+      title: "Visit & info — Maximilien",
       description:
         "Opening hours, access, prices and public transport. Everything you need to know before visiting the urban farm.",
     },
   },
   animals: {
     nl: {
-      title: "Onze dieren — Maxilien",
+      title: "Onze dieren — Maximilien",
       description:
         "Maak kennis met de geiten, schapen, ezels, kippen en konijnen van de stadsboerderij.",
     },
     fr: {
-      title: "Nos animaux — Maxilien",
+      title: "Nos animaux — Maximilien",
       description:
         "Faites connaissance avec les chèvres, moutons, ânes, poules et lapins de la ferme urbaine.",
     },
     en: {
-      title: "Our animals — Maxilien",
+      title: "Our animals — Maximilien",
       description: "Meet the goats, sheep, donkeys, chickens and rabbits of the urban farm.",
     },
   },
   education: {
     nl: {
-      title: "Educatie & scholen — Maxilien",
+      title: "Educatie & scholen — Maximilien",
       description:
         "Schoolbezoeken, animaties en workshops rond dieren, moestuin en biodiversiteit. Reserveer je schoolbezoek.",
     },
     fr: {
-      title: "Éducation & écoles — Maxilien",
+      title: "Éducation & écoles — Maximilien",
       description:
         "Visites scolaires, animations et ateliers autour des animaux, du potager et de la biodiversité.",
     },
     en: {
-      title: "Education & schools — Maxilien",
+      title: "Education & schools — Maximilien",
       description:
         "School visits, activities and workshops about animals, the kitchen garden and biodiversity.",
     },
   },
   support: {
     nl: {
-      title: "Steun ons — Maxilien",
+      title: "Steun ons — Maximilien",
       description:
         "Steun de stadsboerderij met een gift, via Wero of overschrijving. Concrete doelen: voer, ateliers, stallen.",
     },
     fr: {
-      title: "Nous soutenir — Maxilien",
+      title: "Nous soutenir — Maximilien",
       description:
         "Soutenez la ferme urbaine par un don, via Wero ou virement. Objectifs concrets : nourriture, ateliers, étables.",
     },
     en: {
-      title: "Support us — Maxilien",
+      title: "Support us — Maximilien",
       description:
         "Support the urban farm with a donation, via Wero or bank transfer. Concrete goals: feed, workshops, stables.",
     },
   },
   news: {
     nl: {
-      title: "Nieuws & agenda — Maxilien",
+      title: "Nieuws & agenda — Maximilien",
       description:
         "Activiteiten, evenementen en nieuws van de stadsboerderij aan het Maximiliaanpark.",
     },
     fr: {
-      title: "Actualités & agenda — Maxilien",
+      title: "Actualités & agenda — Maximilien",
       description: "Activités, événements et actualités de la ferme urbaine du parc Maximilien.",
     },
     en: {
-      title: "News & events — Maxilien",
+      title: "News & events — Maximilien",
       description: "Activities, events and news from the urban farm at Maximilien Park.",
     },
   },
   about: {
     nl: {
-      title: "Over het park — Maxilien",
+      title: "Over het park — Maximilien",
       description: "Missie, geschiedenis, team en bestuur van de stadsboerderij in Brussel.",
     },
     fr: {
-      title: "À propos — Maxilien",
+      title: "À propos — Maximilien",
       description:
         "Mission, histoire, équipe et conseil d'administration de la ferme urbaine à Bruxelles.",
     },
     en: {
-      title: "About us — Maxilien",
+      title: "About us — Maximilien",
       description: "Mission, history, team and board of the urban farm in Brussels.",
     },
   },
   contact: {
     nl: {
-      title: "Contact — Maxilien",
+      title: "Contact — Maximilien",
       description:
         "Neem contact op: e-mail, telefoon, WhatsApp of kom langs aan het Maximiliaanpark.",
     },
     fr: {
-      title: "Contact — Maxilien",
+      title: "Contact — Maximilien",
       description: "Contactez-nous : e-mail, téléphone, WhatsApp ou passez au parc Maximilien.",
     },
     en: {
-      title: "Contact — Maxilien",
+      title: "Contact — Maximilien",
       description: "Get in touch: email, phone, WhatsApp or drop by at Maximilien Park.",
     },
   },
   privacy: {
     nl: {
-      title: "Privacybeleid — Maxilien",
+      title: "Privacybeleid — Maximilien",
       description:
         "Hoe we met je gegevens omgaan: geen trackingpixels, geen reclame, enkel wat nodig is.",
     },
     fr: {
-      title: "Politique de confidentialité — Maxilien",
+      title: "Politique de confidentialité — Maximilien",
       description:
         "Comment nous traitons vos données : pas de pixels de suivi, pas de publicité, uniquement le nécessaire.",
     },
     en: {
-      title: "Privacy policy — Maxilien",
+      title: "Privacy policy — Maximilien",
       description:
         "How we handle your data: no tracking pixels, no advertising, only what is necessary.",
     },
   },
   terms: {
     nl: {
-      title: "Algemene voorwaarden — Maxilien",
+      title: "Algemene voorwaarden — Maximilien",
       description:
         "Afspraken over reservaties, zaalverhuur, schoolanimaties, workshops, bestellingen en annulering bij de stadsboerderij.",
     },
     fr: {
-      title: "Conditions générales — Maxilien",
+      title: "Conditions générales — Maximilien",
       description:
         "Règles pour les réservations, la location de salle, les animations scolaires, les ateliers, les commandes et les annulations.",
     },
     en: {
-      title: "Terms and conditions — Maxilien",
+      title: "Terms and conditions — Maximilien",
       description:
         "Rules for bookings, venue rental, school activities, workshops, farm shop orders and cancellations.",
     },
   },
   academy: {
     nl: {
-      title: "Academies — Maxilien",
+      title: "Academies — Maximilien",
       description: "Kies je Academy, leer alles over het dier en behaal je certificaat.",
     },
     fr: {
-      title: "Académies — Maxilien",
+      title: "Académies — Maximilien",
       description:
         "Choisissez votre académie, apprenez tout sur l'animal et obtenez votre certificat.",
     },
     en: {
-      title: "Academies — Maxilien",
+      title: "Academies — Maximilien",
       description: "Pick your academy, learn all about the animal and earn your certificate.",
     },
   },
   pass: {
     nl: {
-      title: "Digitale pas — Maxilien",
+      title: "Digitale pas — Maximilien",
       description: "Je digitale boerderijpas met hoefjes, badges en certificaten.",
     },
     fr: {
-      title: "Passe numérique — Maxilien",
+      title: "Passe numérique — Maximilien",
       description: "Votre passe numérique avec sabots, badges et certificats.",
     },
     en: {
-      title: "Digital pass — Maxilien",
+      title: "Digital pass — Maximilien",
       description: "Your digital farm pass with hooves, badges and certificates.",
     },
   },
   login: {
     nl: {
-      title: "Inloggen — Maxilien",
+      title: "Inloggen — Maximilien",
       description: "Log in op je boerderijaccount.",
     },
     fr: {
-      title: "Connexion — Maxilien",
+      title: "Connexion — Maximilien",
       description: "Connectez-vous à votre compte.",
     },
     en: {
-      title: "Log in — Maxilien",
+      title: "Log in — Maximilien",
       description: "Log in to your farm account.",
     },
   },
   account: {
     nl: {
-      title: "Mijn account — Maxilien",
+      title: "Mijn account — Maximilien",
       description: "Je donaties, bestellingen, reservaties en instellingen.",
     },
     fr: {
-      title: "Mon compte — Maxilien",
+      title: "Mon compte — Maximilien",
       description: "Vos dons, commandes, réservations et paramètres.",
     },
     en: {
-      title: "My account — Maxilien",
+      title: "My account — Maximilien",
       description: "Your donations, orders, bookings and settings.",
     },
   },
   rental: {
     nl: {
-      title: "Zalen & ruimtes huren — Maxilien",
+      title: "Zalen & ruimtes huren — Maximilien",
       description:
         "Huur een zaal, het chalet of de boerderijtuin in het hart van Brussel voor je vergadering, feest of workshop.",
     },
     fr: {
-      title: "Location de salles & espaces — Maxilien",
+      title: "Location de salles & espaces — Maximilien",
       description:
         "Louez une salle, le chalet ou le jardin de la ferme au cœur de Bruxelles pour votre réunion, fête ou atelier.",
     },
     en: {
-      title: "Venue & room rental — Maxilien",
+      title: "Venue & room rental — Maximilien",
       description:
         "Rent a hall, the chalet or the farm garden in the heart of Brussels for your meeting, party or workshop.",
     },
   },
   camps: {
     nl: {
-      title: "Vakantiestages 6-10 jaar — Maxilien",
+      title: "Vakantiestages 6-10 jaar — Maximilien",
       description:
         "Een week vol dierenverzorging, tuinieren en buitenpret voor kinderen van 6 tot 10 jaar, midden in Brussel.",
     },
     fr: {
-      title: "Stages de vacances 6-10 ans — Maxilien",
+      title: "Stages de vacances 6-10 ans — Maximilien",
       description:
         "Une semaine de soin des animaux, de jardinage et de grand air pour les enfants de 6 à 10 ans, en pleine ville.",
     },
     en: {
-      title: "Holiday camps ages 6-10 — Maxilien",
+      title: "Holiday camps ages 6-10 — Maximilien",
       description:
         "A week of animal care, gardening and outdoor fun for children aged 6 to 10, right in the middle of Brussels.",
     },
   },
   animations: {
     nl: {
-      title: "Schoolanimaties op de boerderij — Maxilien",
+      title: "Schoolanimaties op de boerderij — Maximilien",
       description:
         "Zes animaties rond zintuigen, boomgaard, bijen, moestuin, compost en de boerderijdag. Met animator en materiaal.",
     },
     fr: {
-      title: "Animations scolaires à la ferme — Maxilien",
+      title: "Animations scolaires à la ferme — Maximilien",
       description:
         "Six animations autour des sens, du verger, des abeilles, du potager, du compost et de la journée à la ferme.",
     },
     en: {
-      title: "School activities at the farm — Maxilien",
+      title: "School activities at the farm — Maximilien",
       description:
         "Six activities on the senses, the orchard, bees, the kitchen garden, compost and a full farm day.",
     },
   },
   teambuilding: {
     nl: {
-      title: "Teambuilding op de boerderij — Maxilien",
+      title: "Teambuilding op de boerderij — Maximilien",
       description:
         "Teambuilding in het Maximiliaanpark of op het platteland in Sterrebeek: samenwerken rond dieren, tuin en vuur.",
     },
     fr: {
-      title: "Team building à la ferme — Maxilien",
+      title: "Team building à la ferme — Maximilien",
       description:
         "Team building au parc Maximilien ou à la campagne à Sterrebeek : coopérer autour des animaux, du jardin et du feu.",
     },
     en: {
-      title: "Team building at the farm — Maxilien",
+      title: "Team building at the farm — Maximilien",
       description:
         "Team building at Maximilien Park or in the countryside in Sterrebeek: cooperate around animals, garden and fire.",
     },
   },
   seminars: {
     nl: {
-      title: "Vergaderingen & seminaries — Maxilien",
+      title: "Vergaderingen & seminaries — Maximilien",
       description:
         "Vergader, seminarieer of geef een workshopdag in een groene setting op wandelafstand van Brussel-Noord.",
     },
     fr: {
-      title: "Réunions & séminaires — Maxilien",
+      title: "Réunions & séminaires — Maximilien",
       description:
         "Réunion, séminaire ou journée d'atelier dans un cadre vert, à deux pas de Bruxelles-Nord.",
     },
     en: {
-      title: "Meetings & seminars — Maxilien",
+      title: "Meetings & seminars — Maximilien",
       description:
         "Hold a meeting, seminar or workshop day in a green setting a short walk from Brussels-North.",
     },
   },
   compost: {
     nl: {
-      title: "Buurtcompost — Maxilien",
+      title: "Buurtcompost — Maximilien",
       description:
         "Breng je groenafval naar de buurtcompost aan het Maximiliaanpark. Openingsmomenten, wat mag en wat niet.",
     },
     fr: {
-      title: "Compost de quartier — Maxilien",
+      title: "Compost de quartier — Maximilien",
       description:
         "Apportez vos déchets verts au compost de quartier du parc Maximilien. Horaires, ce qui est accepté ou non.",
     },
     en: {
-      title: "Neighbourhood compost — Maxilien",
+      title: "Neighbourhood compost — Maximilien",
       description:
         "Bring your green waste to the neighbourhood compost at Maximilien Park. Opening times and what is accepted.",
     },
   },
   shop: {
     nl: {
-      title: "Hoevewinkel — Maxilien",
+      title: "Hoevewinkel — Maximilien",
       description:
         "Verpakkingsvrije, lokale hoeveproducten. Reserveer online en haal op aan de stadsboerderij in Brussel.",
     },
     fr: {
-      title: "Boutique fermière — Maxilien",
+      title: "Boutique fermière — Maximilien",
       description:
         "Produits fermiers locaux et sans emballage. Réservez en ligne et retirez à la ferme urbaine à Bruxelles.",
     },
     en: {
-      title: "Farm shop — Maxilien",
+      title: "Farm shop — Maximilien",
       description:
         "Packaging-free local farm products. Order online and collect at the urban farm in Brussels.",
     },
   },
   product: {
     nl: {
-      title: "Product — Hoevewinkel Maxilien",
+      title: "Product — Hoevewinkel Maximilien",
       description: "Verpakkingsvrij afhalen aan de stadsboerderij in Brussel.",
     },
     fr: {
-      title: "Produit — Boutique fermière Maxilien",
+      title: "Produit — Boutique fermière Maximilien",
       description: "À retirer sans emballage à la ferme urbaine à Bruxelles.",
     },
     en: {
-      title: "Product — Farm shop Maxilien",
+      title: "Product — Farm shop Maximilien",
       description: "Packaging-free collection at the urban farm in Brussels.",
     },
   },
   partners: {
     nl: {
-      title: "Onze partners & netwerken — Maxilien",
+      title: "Onze partners & netwerken — Maximilien",
       description:
         "Overheden, sectorfederaties en digitale partners die de stadsboerderij in Brussel mogelijk maken.",
     },
     fr: {
-      title: "Nos partenaires & réseaux — Maxilien",
+      title: "Nos partenaires & réseaux — Maximilien",
       description:
         "Pouvoirs publics, fédérations et partenaires numériques qui rendent la ferme urbaine possible.",
     },
     en: {
-      title: "Our partners & networks — Maxilien",
+      title: "Our partners & networks — Maximilien",
       description:
         "Public authorities, federations and digital partners supporting the urban farm in Brussels.",
     },
@@ -911,82 +911,82 @@ export const PAGE_META: Record<PageKey, Record<Lang, Meta>> = {
     nl: {
       title: "Social Hub — Live van de stadsboerderij",
       description:
-        "Alle updates, foto's en video's van Maxilien op één plek: Instagram, Facebook en TikTok.",
+        "Alle updates, foto's en video's van Maximilien op één plek: Instagram, Facebook en TikTok.",
     },
     fr: {
       title: "Social Hub — En direct de la ferme urbaine",
       description:
-        "Toutes les publications, photos et vidéos de Maxilien : Instagram, Facebook et TikTok.",
+        "Toutes les publications, photos et vidéos de Maximilien : Instagram, Facebook et TikTok.",
     },
     en: {
       title: "Social Hub — Live from the urban farm",
       description:
-        "All updates, photos and videos from Maxilien: Instagram, Facebook and TikTok.",
+        "All updates, photos and videos from Maximilien: Instagram, Facebook and TikTok.",
     },
   },
   press: {
     nl: {
-      title: "Pers & mediakit — Maxilien",
+      title: "Pers & mediakit — Maximilien",
       description:
         "Logo's in verschillende formaten, merkkleuren, persfoto's, kerncijfers en perscontact van de stadsboerderij in hartje Brussel.",
     },
     fr: {
-      title: "Presse & kit média — Maxilien",
+      title: "Presse & kit média — Maximilien",
       description:
         "Logos en plusieurs formats, couleurs de marque, photos de presse, chiffres clés et contact presse de la ferme urbaine de Bruxelles.",
     },
     en: {
-      title: "Press & media kit — Maxilien",
+      title: "Press & media kit — Maximilien",
       description:
         "Logos in several formats, brand colours, press photos, key figures and press contact for the Brussels city farm.",
     },
   },
   cookies: {
     nl: {
-      title: "Cookie-statement — Maxilien",
+      title: "Cookie-statement — Maximilien",
       description:
         "Geen trackers, geen advertentiecookies en dus geen cookiebanner. Enkel strikt functionele cookies.",
     },
     fr: {
-      title: "Déclaration cookies — Maxilien",
+      title: "Déclaration cookies — Maximilien",
       description:
         "Pas de traceurs, pas de cookies publicitaires et donc aucune bannière cookies. Uniquement des cookies strictement fonctionnels.",
     },
     en: {
-      title: "Cookie statement — Maxilien",
+      title: "Cookie statement — Maximilien",
       description:
         "No trackers, no advertising cookies and therefore no cookie banner. Strictly functional cookies only.",
     },
   },
   status: {
     nl: {
-      title: "Status & infrastructuur — Maxilien",
+      title: "Status & infrastructuur — Maximilien",
       description:
         "Onze domeinen, de geïsoleerde mailgate send.maximilien.site en de Europese infrastructuur achter dit platform.",
     },
     fr: {
-      title: "Statut & infrastructure — Maxilien",
+      title: "Statut & infrastructure — Maximilien",
       description:
         "Nos domaines, la passerelle mail isolée send.maximilien.site et l'infrastructure européenne du platform.",
     },
     en: {
-      title: "Status & infrastructure — Maxilien",
+      title: "Status & infrastructure — Maximilien",
       description:
         "Our domains, the isolated mail gateway send.maximilien.site and the European infrastructure behind this platform.",
     },
   },
   register: {
     nl: {
-      title: "Account aanmaken — Maxilien",
+      title: "Account aanmaken — Maximilien",
       description: "Maak een account om hoefjes te sparen, badges te verzamelen en te bestellen.",
     },
     fr: {
-      title: "Créer un compte — Maxilien",
+      title: "Créer un compte — Maximilien",
       description:
         "Créez un compte pour collecter des sabots, gagner des badges et commander en ligne.",
     },
     en: {
-      title: "Create an account — Maxilien",
+      title: "Create an account — Maximilien",
       description: "Create an account to collect hooves, earn badges and order online.",
     },
   },

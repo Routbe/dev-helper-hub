@@ -7,9 +7,9 @@ const LABEL: Record<Lang, string> = {
 };
 
 const TITLE: Record<Lang, string> = {
-  nl: "Bezoek Maxilien",
-  fr: "Visite Maxilien",
-  en: "Visit Maxilien",
+  nl: "Bezoek Maximilien",
+  fr: "Visite Maximilien",
+  en: "Visit Maximilien",
 };
 
 const LOCATION = "Schipperijkaai 2, 1000 Brussel";
@@ -46,7 +46,7 @@ export function CalendarExportButton({ text, lang }: { text: string; lang: Lang 
     const ics = [
       "BEGIN:VCALENDAR",
       "VERSION:2.0",
-      "PRODID:-//Maxilien//Maxim//NL",
+      "PRODID:-//Maximilien//Maxim//NL",
       "BEGIN:VEVENT",
       `UID:${Date.now()}@lafermeduparcmaximilien.be`,
       `DTSTAMP:${toIcsDate(new Date())}`,

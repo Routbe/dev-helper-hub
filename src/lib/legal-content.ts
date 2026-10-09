@@ -5,7 +5,7 @@
 import type { Lang } from "@/lib/i18n";
 
 export const LEGAL_ENTITY = {
-  name: "Maxilien VZW / ASBL",
+  name: "Maximilien VZW / ASBL",
   address: "Schipperijkaai 2 / Quai du Batelage 2, 1000 Brussel",
   vat: "BE 0446.485.159",
   editor: "Philippine Braye",
@@ -33,7 +33,7 @@ export const LEGAL_COPY: Record<
   nl: {
     eyebrow: "Informatie",
     title: "Wettelijke vermeldingen",
-    lede: "Gebruiksvoorwaarden van de online diensten van vzw Maxilien.",
+    lede: "Gebruiksvoorwaarden van de online diensten van vzw Maximilien.",
     formTitle: "Een juridische vraag over de site?",
     formIntro: "Laat het ons weten — we bekijken het en antwoorden je persoonlijk.",
     orgLabel: "Vereniging zonder winstoogmerk",
@@ -45,7 +45,7 @@ export const LEGAL_COPY: Record<
   fr: {
     eyebrow: "Informations",
     title: "Mentions légales",
-    lede: "Conditions d'utilisation des services en ligne de l'ASBL Maxilien.",
+    lede: "Conditions d'utilisation des services en ligne de l'ASBL Maximilien.",
     formTitle: "Une question juridique sur le site ?",
     formIntro: "Écrivez-nous — nous examinons votre demande et vous répondons personnellement.",
     orgLabel: "Association sans but lucratif",
@@ -57,7 +57,7 @@ export const LEGAL_COPY: Record<
   en: {
     eyebrow: "Information",
     title: "Legal notice",
-    lede: "Terms of use for the online services of the non-profit Maxilien.",
+    lede: "Terms of use for the online services of the non-profit Maximilien.",
     formTitle: "A legal question about the site?",
     formIntro: "Write to us — we look into it and reply personally.",
     orgLabel: "Non-profit organisation",
@@ -73,17 +73,17 @@ export const LEGAL_SECTIONS: LegalSection[] = [
     title: { nl: "Inleiding", fr: "Introduction", en: "Introduction" },
     body: {
       nl: [
-        "Vzw Maxilien, Schipperijkaai 2, 1000 Brussel, ingeschreven in de KBO onder nummer BE 0446.485.159, bepaalt hierna de voorwaarden voor het gebruik van haar online diensten.",
+        "Vzw Maximilien, Schipperijkaai 2, 1000 Brussel, ingeschreven in de KBO onder nummer BE 0446.485.159, bepaalt hierna de voorwaarden voor het gebruik van haar online diensten.",
         "Beheer van de online diensten: Philippine Braye. Hosting: OVH.",
         "Deze voorwaarden worden aangevuld door ons privacybeleid.",
       ],
       fr: [
-        "L'ASBL Maxilien, Quai du Batelage 2, 1000 Bruxelles, inscrite à la BCE sous le n° BE 0446.485.159, définit dans les présentes les conditions d'utilisation de ses services en ligne.",
+        "L'ASBL Maximilien, Quai du Batelage 2, 1000 Bruxelles, inscrite à la BCE sous le n° BE 0446.485.159, définit dans les présentes les conditions d'utilisation de ses services en ligne.",
         "Gestion des services en ligne : Philippine Braye. Hébergement : OVH.",
         "Ces conditions sont complétées par notre politique de confidentialité.",
       ],
       en: [
-        "The non-profit Maxilien, Quai du Batelage 2, 1000 Brussels, registered with the Belgian Crossroads Bank under BE 0446.485.159, sets out below the conditions for using its online services.",
+        "The non-profit Maximilien, Quai du Batelage 2, 1000 Brussels, registered with the Belgian Crossroads Bank under BE 0446.485.159, sets out below the conditions for using its online services.",
         "Online services management: Philippine Braye. Hosting: OVH.",
         "These terms are completed by our privacy policy.",
       ],

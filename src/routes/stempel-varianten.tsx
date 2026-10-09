@@ -4,7 +4,7 @@ import { RubberStamp, STAMP_VARIANTS } from "@/components/RubberStamp";
 export const Route = createFileRoute("/stempel-varianten")({
   head: () => ({
     meta: [
-      { title: "Stempelvarianten — Maxilien" },
+      { title: "Stempelvarianten — Maximilien" },
       {
         name: "description",
         content:

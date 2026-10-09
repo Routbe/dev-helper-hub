@@ -5,7 +5,7 @@ export const runtime = "nodejs";
 type Part = { type: "text"; text: string } | { type: "image_url"; imageUrl: string };
 type InMsg = { role: "user" | "assistant"; content: string; imageUrls?: string[] };
 
-const SYSTEM_PROMPT = `Je bent Maxim AI, de beheerassistent van het beheerportaal van Maximilien (stadsboerderij Maximilien; in het Frans: Maxilien).
+const SYSTEM_PROMPT = `Je bent Maxim AI, de beheerassistent van het beheerportaal van Maximilien (stadsboerderij Maximilien; in het Frans: Maximilien).
 Je helpt uitsluitend met deze concrete acties via de beschikbare tools:
 - site-instellingen aanpassen (adres, aankondigingsbalk, noodmelding);
 - een dienstprijs of tarief aanpassen;

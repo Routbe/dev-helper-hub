@@ -35,7 +35,7 @@ export type SmtpConfigStatus = {
   complete: boolean;
 };
 
-const DEFAULT_FROM_NAME = "Maxilien";
+const DEFAULT_FROM_NAME = "Maximilien";
 /** Vaste huisstijl-terugval; BREVO_SENDER_EMAIL uit de omgeving gaat altijd voor. */
 const DEFAULT_FROM_ADDRESS = "no-reply@send.maximilien.site";
 

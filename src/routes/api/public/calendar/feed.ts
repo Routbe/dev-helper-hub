@@ -69,7 +69,7 @@ export const Route = createFileRoute("/api/public/calendar/feed")({
         const lines = [
           "BEGIN:VCALENDAR",
           "VERSION:2.0",
-          "PRODID:-//Maxilien//Agenda//NL",
+          "PRODID:-//Maximilien//Agenda//NL",
           "CALSCALE:GREGORIAN",
           "METHOD:PUBLISH",
           "X-WR-CALNAME:Ferme Maximilien Agenda",
@@ -84,7 +84,7 @@ export const Route = createFileRoute("/api/public/calendar/feed")({
             `DTSTART;TZID=Europe/Brussels:${stamp(r.event_date, r.start_time)}`,
             `DTEND;TZID=Europe/Brussels:${stamp(r.event_date, r.end_time)}`,
             `SUMMARY:${esc(title)}`,
-            `DESCRIPTION:${esc(`${title} — ${r.type} · Maxilien`)}`,
+            `DESCRIPTION:${esc(`${title} — ${r.type} · Maximilien`)}`,
             `LOCATION:${esc(ADDRESS)}`,
             `CATEGORIES:${esc(r.type)}`,
             "END:VEVENT",

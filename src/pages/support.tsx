@@ -76,7 +76,7 @@ const COPY: Record<
 
 const IBAN = "BE00 0000 0000 0000";
 const BIC = "GEBABEBB";
-const NAME = "ASBL Maxilien";
+const NAME = "ASBL Maximilien";
 const WERO_EMAIL = "dons@maximilien.brussels";
 
 export function SupportPage() {

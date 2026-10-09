@@ -16,14 +16,14 @@ const heroSheepPark = "/hero-schapen-park.webp";
 
 const COPY: Record<Lang, { heroAlt: string; brussels: string }> = {
   nl: {
-    heroAlt: "Schapen in het groene park van Maxilien",
+    heroAlt: "Schapen in het groene park van Maximilien",
     brussels: "Brussel",
   },
   fr: {
-    heroAlt: "Moutons dans le parc verdoyant de Maxilien",
+    heroAlt: "Moutons dans le parc verdoyant de Maximilien",
     brussels: "Bruxelles",
   },
-  en: { heroAlt: "Sheep in the green park of Maxilien", brussels: "Brussels" },
+  en: { heroAlt: "Sheep in the green park of Maximilien", brussels: "Brussels" },
 };
 
 export const orgQO = queryOptions({ queryKey: ["org"], queryFn: () => getOrganisation() });

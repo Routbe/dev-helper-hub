@@ -496,7 +496,7 @@ export function EmailPage() {
               id="smtp-from-name"
               value={form.from_name}
               onChange={(e) => setForm({ ...form, from_name: e.target.value })}
-              placeholder="Maxilien"
+              placeholder="Maximilien"
               autoComplete="off"
             />
           </div>

@@ -1,10 +1,10 @@
-/** Official stylised "M" mark of Maxilien. */
+/** Official stylised "M" mark of Maximilien. */
 export function BrandMark({ className }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 40 40"
       role="img"
-      aria-label="Maxilien"
+      aria-label="Maximilien"
       className={className}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

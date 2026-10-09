@@ -73,13 +73,13 @@ export const Route = createFileRoute("/auth/")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "Medewerkerslogin — Maxilien" },
+      { title: "Medewerkerslogin — Maximilien" },
       {
         name: "description",
         content:
-          "Beveiligde toegang tot het beheerportaal van Maxilien voor medewerkers en beheerders.",
+          "Beveiligde toegang tot het beheerportaal van Maximilien voor medewerkers en beheerders.",
       },
-      { property: "og:title", content: "Medewerkerslogin — Maxilien" },
+      { property: "og:title", content: "Medewerkerslogin — Maximilien" },
       {
         property: "og:description",
         content: "Beveiligde toegang tot het beheerportaal voor medewerkers.",
@@ -393,7 +393,7 @@ function AuthPage() {
           <Link to="/" aria-label="Terug naar de hoofdsite">
             <MLogo className="mx-auto h-12 w-auto" />
           </Link>
-          <h1 className="font-display mt-3 text-xl font-bold">Maxilien</h1>
+          <h1 className="font-display mt-3 text-xl font-bold">Maximilien</h1>
           <p className="text-sm text-muted-foreground">
             {postLoginPath === "/veld" ? "Veld-app voor medewerkers" : "Beheerportaal voor medewerkers"}
           </p>

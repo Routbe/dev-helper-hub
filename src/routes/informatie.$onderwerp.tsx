@@ -12,7 +12,7 @@ export const Route = createFileRoute("/informatie/$onderwerp")({
     if (!loaderData) {
       return {
         meta: [
-          { title: "Informatie — Maxilien" },
+          { title: "Informatie — Maximilien" },
           { name: "robots", content: "noindex" },
         ],
       };
@@ -21,7 +21,7 @@ export const Route = createFileRoute("/informatie/$onderwerp")({
     const desc = entry.lede.slice(0, 155);
     return {
       meta: [
-        { title: `${entry.title} — Maxilien` },
+        { title: `${entry.title} — Maximilien` },
         { name: "description", content: desc },
         { property: "og:title", content: entry.title },
         { property: "og:description", content: desc },

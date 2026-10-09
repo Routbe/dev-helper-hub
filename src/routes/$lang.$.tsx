@@ -183,7 +183,7 @@ export const Route = createFileRoute("/$lang/$")({
       const name = (loaderData as { academyName?: string } | undefined)?.academyName ?? sub;
       return localizedHead("academy", lang, {
         subId: sub,
-        title: `${name} Academy — Maxilien`,
+        title: `${name} Academy — Maximilien`,
         description: PAGE_META.academy[lang].description,
       });
     }
@@ -191,7 +191,7 @@ export const Route = createFileRoute("/$lang/$")({
       const item = newsBySlug(lang, sub);
       if (item) {
         return localizedHead("news", lang, {
-          title: `${item.title[lang]} — Maxilien`,
+          title: `${item.title[lang]} — Maximilien`,
           description: item.lede[lang],
           newsId: item.id,
           type: "article",
@@ -212,7 +212,7 @@ export const Route = createFileRoute("/$lang/$")({
       if (animation) {
         return localizedHead("animations", lang, {
           subId: id,
-          title: `${animation.copy[lang].title} — Maxilien`,
+          title: `${animation.copy[lang].title} — Maximilien`,
           description: animation.copy[lang].lede,
           jsonLd: [
             courseJsonLd({
@@ -234,9 +234,9 @@ export const Route = createFileRoute("/$lang/$")({
     }
     if (key === "support" && sub && subSlugToId("support", lang, sub) === "sponsor") {
       const sponsorTitle: Record<Lang, string> = {
-        nl: "Word Peter of Meter — Maxilien",
-        fr: "Devenez marraine ou parrain — Maxilien",
-        en: "Become a sponsor — Maxilien",
+        nl: "Word Peter of Meter — Maximilien",
+        fr: "Devenez marraine ou parrain — Maximilien",
+        en: "Become a sponsor — Maximilien",
       };
       const sponsorDescription: Record<Lang, string> = {
         nl: "Adopteer symbolisch een dier van de boerderij en steun hun dagelijkse zorg.",

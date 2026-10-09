@@ -27,19 +27,19 @@ const COPY: Record<
   { ambienceAlt: (title: string) => string; planTitle: string; planAlt: string }
 > = {
   nl: {
-    ambienceAlt: (title) => `Sfeerbeeld van Maxilien — ${title}`,
+    ambienceAlt: (title) => `Sfeerbeeld van Maximilien — ${title}`,
     planTitle: "Plattegrond van de boerderij",
-    planAlt: "Plattegrond van Maxilien met dieren, moestuinen en ingangen",
+    planAlt: "Plattegrond van Maximilien met dieren, moestuinen en ingangen",
   },
   fr: {
-    ambienceAlt: (title) => `Ambiance de Maxilien — ${title}`,
+    ambienceAlt: (title) => `Ambiance de Maximilien — ${title}`,
     planTitle: "Plan de la ferme",
-    planAlt: "Plan de Maxilien avec les animaux, potagers et entrées",
+    planAlt: "Plan de Maximilien avec les animaux, potagers et entrées",
   },
   en: {
-    ambienceAlt: (title) => `Atmosphere image of Maxilien — ${title}`,
+    ambienceAlt: (title) => `Atmosphere image of Maximilien — ${title}`,
     planTitle: "Farm map",
-    planAlt: "Map of Maxilien showing animals, kitchen gardens and entrances",
+    planAlt: "Map of Maximilien showing animals, kitchen gardens and entrances",
   },
 };
 

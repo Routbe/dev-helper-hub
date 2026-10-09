@@ -49,7 +49,7 @@ const COPY: Record<
   }
 > = {
   nl: {
-    kicker: "Maxilien",
+    kicker: "Maximilien",
     title: "JUNIOR BOERDERIJ EXPERT",
     subtitle: "Diploma Dierenvriend",
     awarded: "Dit diploma is met trots uitgereikt aan",
@@ -69,7 +69,7 @@ const COPY: Record<
     namePlaceholder: "Boerderijheld",
   },
   fr: {
-    kicker: "Maxilien",
+    kicker: "Maximilien",
     title: "JEUNE EXPERT DE LA FERME",
     subtitle: "Diplôme Ami des Animaux",
     awarded: "Ce diplôme est fièrement remis à",
@@ -89,7 +89,7 @@ const COPY: Record<
     namePlaceholder: "Héros de la ferme",
   },
   en: {
-    kicker: "Maxilien",
+    kicker: "Maximilien",
     title: "JUNIOR FARM EXPERT",
     subtitle: "Animal Friend Diploma",
     awarded: "This diploma is proudly awarded to",

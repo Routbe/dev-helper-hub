@@ -258,10 +258,10 @@ const pressRelease: TeamTemplate = {
         kicker: "Persbericht · Brussel, [[Datum]]",
         body1: "Schrijf hier de eerste alinea: wie, wat, waar, wanneer en waarom. Journalisten lezen vaak alleen deze alinea.",
         body2: "Tweede alinea met context, cijfers en het bredere verhaal van de stadsboerderij in hartje Brussel.",
-        quoteBy: "[[Naam woordvoerder]], Maxilien",
-        boilerTitle: "Over Maxilien",
+        quoteBy: "[[Naam woordvoerder]], Maximilien",
+        boilerTitle: "Over Maximilien",
         boiler:
-          "Maxilien is een stadsboerderij in het hart van Brussel, tussen het Noordstation en het kanaal. De vzw verwelkomt scholen, buurtbewoners en bezoekers gratis, met dieren, een moestuin, buurtcompost, een hoevewinkel en educatieve programma's rond voeding en biodiversiteit.",
+          "Maximilien is een stadsboerderij in het hart van Brussel, tussen het Noordstation en het kanaal. De vzw verwelkomt scholen, buurtbewoners en bezoekers gratis, met dieren, een moestuin, buurtcompost, een hoevewinkel en educatieve programma's rond voeding en biodiversiteit.",
         contactTitle: "Perscontact",
         kit: "Logo's, persfoto's en kerncijfers",
       },
@@ -270,10 +270,10 @@ const pressRelease: TeamTemplate = {
         kicker: "Communiqué · Bruxelles, [[Datum]]",
         body1: "Rédigez ici le premier paragraphe : qui, quoi, où, quand et pourquoi. Les journalistes ne lisent souvent que celui-ci.",
         body2: "Deuxième paragraphe avec le contexte, les chiffres et l'histoire plus large de la ferme urbaine au cœur de Bruxelles.",
-        quoteBy: "[[Naam woordvoerder]], Maxilien",
-        boilerTitle: "À propos de Maxilien",
+        quoteBy: "[[Naam woordvoerder]], Maximilien",
+        boilerTitle: "À propos de Maximilien",
         boiler:
-          "Maxilien est une ferme urbaine au cœur de Bruxelles, entre la gare du Nord et le canal. L'ASBL accueille gratuitement écoles, habitants et visiteurs, avec des animaux, un potager, un compost de quartier, une boutique fermière et des programmes éducatifs autour de l'alimentation et de la biodiversité.",
+          "Maximilien est une ferme urbaine au cœur de Bruxelles, entre la gare du Nord et le canal. L'ASBL accueille gratuitement écoles, habitants et visiteurs, avec des animaux, un potager, un compost de quartier, une boutique fermière et des programmes éducatifs autour de l'alimentation et de la biodiversité.",
         contactTitle: "Contact presse",
         kit: "Logos, photos de presse et chiffres clés",
       },
@@ -282,10 +282,10 @@ const pressRelease: TeamTemplate = {
         kicker: "Press release · Brussels, [[Datum]]",
         body1: "Write the first paragraph here: who, what, where, when and why. Journalists often read only this paragraph.",
         body2: "Second paragraph with context, figures and the wider story of the city farm in the heart of Brussels.",
-        quoteBy: "[[Naam woordvoerder]], Maxilien",
-        boilerTitle: "About Maxilien",
+        quoteBy: "[[Naam woordvoerder]], Maximilien",
+        boilerTitle: "About Maximilien",
         boiler:
-          "Maxilien is a city farm in the heart of Brussels, between the North Station and the canal. The non-profit welcomes schools, neighbours and visitors free of charge, with animals, a kitchen garden, neighbourhood compost, a farm shop and educational programmes on food and biodiversity.",
+          "Maximilien is a city farm in the heart of Brussels, between the North Station and the canal. The non-profit welcomes schools, neighbours and visitors free of charge, with animals, a kitchen garden, neighbourhood compost, a farm shop and educational programmes on food and biodiversity.",
         contactTitle: "Press contact",
         kit: "Logos, press photos and key figures",
       },
@@ -465,9 +465,9 @@ const announcement: TeamTemplate = {
   placeholders: ["Titel", "Datum", "Bericht"],
   build(lang) {
     const c = {
-      nl: { subject: "[[Titel]] — Maxilien", kicker: "Mededeling", labels: { when: "Wanneer", where: "Waar" }, cta: "Bekijk de openingsuren", small: "Vragen? Antwoord gerust op deze mail." },
-      fr: { subject: "[[Titel]] — Maxilien", kicker: "Annonce", labels: { when: "Quand", where: "Où" }, cta: "Voir les horaires", small: "Des questions ? Répondez simplement à cet e-mail." },
-      en: { subject: "[[Titel]] — Maxilien", kicker: "Notice", labels: { when: "When", where: "Where" }, cta: "See opening hours", small: "Questions? Just reply to this email." },
+      nl: { subject: "[[Titel]] — Maximilien", kicker: "Mededeling", labels: { when: "Wanneer", where: "Waar" }, cta: "Bekijk de openingsuren", small: "Vragen? Antwoord gerust op deze mail." },
+      fr: { subject: "[[Titel]] — Maximilien", kicker: "Annonce", labels: { when: "Quand", where: "Où" }, cta: "Voir les horaires", small: "Des questions ? Répondez simplement à cet e-mail." },
+      en: { subject: "[[Titel]] — Maximilien", kicker: "Notice", labels: { when: "When", where: "Where" }, cta: "See opening hours", small: "Questions? Just reply to this email." },
     }[lang];
     const o = origin();
     const body = `

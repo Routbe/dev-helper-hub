@@ -105,12 +105,25 @@ export function NavHeader() {
   const profileBtnRef = useRef<HTMLButtonElement | null>(null);
   const profileMenuRef = useRef<HTMLDivElement | null>(null);
   const menuBtnRef = useRef<HTMLButtonElement | null>(null);
-  const { t, lang } = useT();
-  const c = COPY[lang];
-  const hubs = getHubMenu(lang);
+  const { t, lang, tx, extra } = useT();
+  const c0 = COPY[lang];
+  const c = {
+    ...c0,
+    hello: (name: string) => (lang === "en" && extra === "de" ? `Hallo, ${name}` : c0.hello(name)),
+    ...Object.fromEntries(
+      Object.entries(c0)
+        .filter(([, v]) => typeof v === "string")
+        .map(([k, v]) => [k, tx(v as string)]),
+    ),
+  } as typeof c0;
+  const hubs = getHubMenu(lang).map((h) => ({
+    ...h,
+    label: tx(h.label),
+    items: h.items.map((it) => ({ ...it, label: tx(it.label), hint: it.hint ? tx(it.hint) : it.hint })),
+  }));
   const byKey = (k: string) => hubs.find((h) => h.key === k)?.items ?? [];
   const groupLabel = (nl: string, fr: string, en: string) =>
-    lang === "fr" ? fr : lang === "en" ? en : nl;
+    lang === "fr" ? fr : lang === "en" ? tx(en) : nl;
   type NavItem = { label: string; href: string; hint?: string };
   type DesktopGroup = {
     key: string;

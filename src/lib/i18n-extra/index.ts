@@ -43,3 +43,17 @@ export function isExtraLang(v: string | null | undefined): v is ExtraLang {
 export function visibleExtraLangs(active: ExtraLang | null): ExtraLangMeta[] {
   return EXTRA_LANGS.filter((x) => x.ready || x.code === active);
 }
+
+import dePhrases from "./de-phrases";
+
+/**
+ * Zinnen die rechtstreeks in een pagina staan (nl/fr/en naast elkaar) worden
+ * vertaald op basis van hun Engelse tekst. Ontbreekt een vertaling, dan blijft
+ * het Engels staan.
+ */
+export const EXTRA_PHRASES: Partial<Record<ExtraLang, Record<string, string>>> = { de: dePhrases };
+
+export function translatePhrase(extra: ExtraLang | null | undefined, en: string): string {
+  if (!extra) return en;
+  return EXTRA_PHRASES[extra]?.[en] ?? en;
+}

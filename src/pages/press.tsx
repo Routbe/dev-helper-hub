@@ -103,9 +103,9 @@ const COPY = {
   colorsTitle: { nl: "Merkkleuren", fr: "Couleurs de marque", en: "Brand colours" } as T3,
   photosTitle: { nl: "Persfoto's", fr: "Photos de presse", en: "Press photos" } as T3,
   photosLede: {
-    nl: "Vrij te gebruiken in redactionele context, met bronvermelding “© Maxilien”.",
-    fr: "Libres d'utilisation en contexte rédactionnel, avec la mention « © Maxilien ».",
-    en: "Free for editorial use with the credit “© Maxilien”.",
+    nl: "Vrij te gebruiken in redactionele context, met bronvermelding “© Maximilien”.",
+    fr: "Libres d'utilisation en contexte rédactionnel, avec la mention « © Maximilien ».",
+    en: "Free for editorial use with the credit “© Maximilien”.",
   } as T3,
   photosZip: {
     nl: "Download alle persfoto's (ZIP — hoge resolutie)",
@@ -563,17 +563,17 @@ const QUOTE: T3 = {
 };
 
 const QUOTE_SOURCE: T3 = {
-  nl: "— Woordvoering / directie Maxilien",
-  fr: "— Porte-parole / direction Maxilien",
-  en: "— Spokesperson / management, Maxilien",
+  nl: "— Woordvoering / directie Maximilien",
+  fr: "— Porte-parole / direction Maximilien",
+  en: "— Spokesperson / management, Maximilien",
 };
 
 const MEDIA_OUTLETS = ["BRUZZ", "BX1", "RTBF", "LE SOIR", "DE STANDAARD"];
 
 const BOILERPLATE: T3 = {
-  nl: "Maxilien is een stadsboerderij en sociale onderneming in hartje Brussel, pal naast het Noordstation. Op één hectare tussen de woontorens leven zo'n 120 dieren, groeit een moestuin en draait een buurtcompost. De vzw combineert dierenwelzijn en stadslandbouw met educatie, socioprofessionele inschakeling en vrijwilligerswerk: schoolanimaties, vakantiestages, verjaardagen, teambuilding en zaalverhuur maken de werking mogelijk. De boerderij is gratis toegankelijk voor iedereen.",
-  fr: "Maxilien est une ferme urbaine et une entreprise sociale au cœur de Bruxelles, juste à côté de la gare du Nord. Sur un hectare entre les tours vivent quelque 120 animaux, avec un potager et un compost de quartier. L'ASBL allie bien-être animal et agriculture urbaine à l'éducation, l'insertion socioprofessionnelle et le bénévolat : animations scolaires, stages, anniversaires, teambuilding et location de salles font vivre le projet. La ferme est accessible gratuitement à toutes et tous.",
-  en: "Maxilien is a city farm and social enterprise in the heart of Brussels, right next to the North Station. On one hectare between the tower blocks live some 120 animals, alongside a kitchen garden and a neighbourhood compost. The non-profit combines animal welfare and urban agriculture with education, work integration and volunteering: school activities, holiday camps, birthdays, team building and venue rental keep the project running. The farm is free to visit for everyone.",
+  nl: "Maximilien is een stadsboerderij en sociale onderneming in hartje Brussel, pal naast het Noordstation. Op één hectare tussen de woontorens leven zo'n 120 dieren, groeit een moestuin en draait een buurtcompost. De vzw combineert dierenwelzijn en stadslandbouw met educatie, socioprofessionele inschakeling en vrijwilligerswerk: schoolanimaties, vakantiestages, verjaardagen, teambuilding en zaalverhuur maken de werking mogelijk. De boerderij is gratis toegankelijk voor iedereen.",
+  fr: "Maximilien est une ferme urbaine et une entreprise sociale au cœur de Bruxelles, juste à côté de la gare du Nord. Sur un hectare entre les tours vivent quelque 120 animaux, avec un potager et un compost de quartier. L'ASBL allie bien-être animal et agriculture urbaine à l'éducation, l'insertion socioprofessionnelle et le bénévolat : animations scolaires, stages, anniversaires, teambuilding et location de salles font vivre le projet. La ferme est accessible gratuitement à toutes et tous.",
+  en: "Maximilien is a city farm and social enterprise in the heart of Brussels, right next to the North Station. On one hectare between the tower blocks live some 120 animals, alongside a kitchen garden and a neighbourhood compost. The non-profit combines animal welfare and urban agriculture with education, work integration and volunteering: school activities, holiday camps, birthdays, team building and venue rental keep the project running. The farm is free to visit for everyone.",
 };
 
 function useCopy() {

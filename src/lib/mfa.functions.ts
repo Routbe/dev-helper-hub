@@ -191,7 +191,7 @@ export const sendSmsCode = createServerFn({ method: "POST" })
       country: channel === "whatsapp" ? "INTL" : "BE",
       ttlSeconds: 600,
     });
-    if (channel === "whatsapp") await mfa.sendWhatsapp(phone, `Maxilien – je verificatiecode is: ${code}`);
+    if (channel === "whatsapp") await mfa.sendWhatsapp(phone, `Maximilien – je verificatiecode is: ${code}`);
     else await mfa.sendSms(phone, `Uw verificatiecode is: ${code}`);
     return { sentTo: `${phone.slice(0, 5)} •• •• ${phone.slice(-2)}` };
   });

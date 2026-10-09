@@ -59,7 +59,7 @@ export const Route = createFileRoute("/verifieer/$code")({
       { title: `Certificaat #${params.code} — officiële verificatie` },
       {
         name: "description",
-        content: `Officiële echtheidscontrole van Academy-certificaat #${params.code} van Maxilien.`,
+        content: `Officiële echtheidscontrole van Academy-certificaat #${params.code} van Maximilien.`,
       },
       { property: "og:title", content: `Certificaat #${params.code} geverifieerd` },
       {
@@ -223,7 +223,7 @@ function VerifieerCodePage() {
             />
             <Row
               label="Instantie"
-              value="Maxilien (Stadsboerderij Maximiliaan Brussel)"
+              value="Maximilien (Stadsboerderij Maximiliaan Brussel)"
             />
           </dl>
 

@@ -40,7 +40,7 @@ export const TRANSPARENCY_COPY: Record<
   nl: {
     eyebrow: "Over ons",
     title: "Transparantie",
-    lede: "Subsidies, overheidsopdrachten, verloning en jaarverslag van vzw Maxilien.",
+    lede: "Subsidies, overheidsopdrachten, verloning en jaarverslag van vzw Maximilien.",
     introTitle: "Inleiding",
     intro: [
       "Op deze pagina bundelen we alles rond de transparantie van de vzw:",
@@ -72,7 +72,7 @@ export const TRANSPARENCY_COPY: Record<
   fr: {
     eyebrow: "À propos",
     title: "Transparence",
-    lede: "Subsides, marchés publics, rémunérations et rapport annuel de l'ASBL Maxilien.",
+    lede: "Subsides, marchés publics, rémunérations et rapport annuel de l'ASBL Maximilien.",
     introTitle: "Introduction",
     intro: [
       "Vous trouverez sur cette page le contenu relatif à la transparence de l'ASBL :",
@@ -80,13 +80,13 @@ export const TRANSPARENCY_COPY: Record<
     ],
     subsidiesTitle: "Subventions",
     subsidiesIntro:
-      "Les subsides reçus par Maxilien en 2025, avec leur pouvoir subsidiant et le montant perçu :",
+      "Les subsides reçus par Maximilien en 2025, avec leur pouvoir subsidiant et le montant perçu :",
     studiesTitle: "Études",
     studies:
-      "Aucune étude n'a été commandée par Maxilien en 2025. Néant — 2025.",
+      "Aucune étude n'a été commandée par Maximilien en 2025. Néant — 2025.",
     tendersTitle: "Marchés publics",
     tendersIntro:
-      "Aucun marché public n'a été publié par Maxilien en 2025. Les marchés remportés au cours de l'année 2025 sont les suivants :",
+      "Aucun marché public n'a été publié par Maximilien en 2025. Les marchés remportés au cours de l'année 2025 sont les suivants :",
     jobsTitle: "Emploi",
     jobsIntro:
       "Toutes les informations relatives aux recrutements et aux appels à candidats sont publiées sur notre page emploi et sur LinkedIn.",
@@ -105,7 +105,7 @@ export const TRANSPARENCY_COPY: Record<
   en: {
     eyebrow: "About us",
     title: "Transparency",
-    lede: "Subsidies, public contracts, pay and annual report of the non-profit Maxilien.",
+    lede: "Subsidies, public contracts, pay and annual report of the non-profit Maximilien.",
     introTitle: "Introduction",
     intro: [
       "This page gathers everything about the transparency of the non-profit:",

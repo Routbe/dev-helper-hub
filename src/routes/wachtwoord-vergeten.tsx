@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
-const TITLE = "Wachtwoord vergeten — Maxilien";
+const TITLE = "Wachtwoord vergeten — Maximilien";
 const DESC = "Vraag een herstellink aan om een nieuw wachtwoord in te stellen voor je account.";
 
 export const Route = createFileRoute("/wachtwoord-vergeten")({

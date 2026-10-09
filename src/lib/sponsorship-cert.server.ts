@@ -15,7 +15,7 @@ const COPY = {
     kicker: "OFFICIEEL CERTIFICAAT",
     title: "Peter- of Meterschap",
     intro: "Hierbij verklaren wij dat",
-    body: (a: string) => `Peter of Meter is geworden van ${a}, en zo bijdraagt aan de dagelijkse zorg, voeding en het welzijn van dit dier op Maxilien.`,
+    body: (a: string) => `Peter of Meter is geworden van ${a}, en zo bijdraagt aan de dagelijkse zorg, voeding en het welzijn van dit dier op Maximilien.`,
     tier: "Formule",
     date: "Datum",
     code: "Certificaatnummer",
@@ -74,7 +74,7 @@ export async function buildSponsorshipCertificatePdf(data: SponsorCertData): Pro
   doc.setFont("helvetica", "normal").setFontSize(10);
   doc.setTextColor(122, 111, 74);
   y += 8;
-  doc.text("Maxilien · Bruxelles", center, y, { align: "center" });
+  doc.text("Maximilien · Bruxelles", center, y, { align: "center" });
 
   y += 16;
   doc.setFont("helvetica", "italic").setFontSize(12);

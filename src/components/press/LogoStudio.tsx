@@ -203,7 +203,7 @@ export function LogoStudio({ lang }: { lang: Lang }) {
 
   function fileName(px: number) {
     const shape = square ? "vierkant" : "logo";
-    return `logo-maxilien-${variant.id}-${shape}-${px}px.${format.ext}`;
+    return `logo-maximilien-${variant.id}-${shape}-${px}px.${format.ext}`;
   }
 
   async function downloadOne(px: number) {
