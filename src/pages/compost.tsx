@@ -28,9 +28,11 @@ const FORM: Record<string, { title: string; intro: string; compostAlt: string }>
 };
 
 export function CompostPage() {
-  const { lang } = useT();
-  const c = COMPOST_COPY[lang];
-  const f = FORM[lang];
+  const { lang, tx } = useT();
+  const c0 = COMPOST_COPY[lang];
+  const c = Object.fromEntries(Object.entries(c0).map(([k, v]) => [k, tx(v)])) as typeof c0;
+  const f0 = FORM[lang]!;
+  const f = { title: tx(f0.title), intro: tx(f0.intro), compostAlt: tx(f0.compostAlt) };
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -55,7 +57,7 @@ export function CompostPage() {
                 key={s.time + s.day.nl}
                 className="flex items-center justify-between rounded-2xl border border-border/50 px-4 py-3 text-sm"
               >
-                <span className="font-medium text-[color:var(--ink-forest)]">{s.day[lang]}</span>
+                <span className="font-medium text-[color:var(--ink-forest)]">{tx(s.day[lang])}</span>
                 <span className="text-muted-foreground">{s.time}</span>
               </li>
             ))}
@@ -72,7 +74,7 @@ export function CompostPage() {
                     className="mt-0.5 h-4 w-4 shrink-0 text-[color:var(--ink-forest)]"
                     aria-hidden
                   />
-                  <span>{i}</span>
+                  <span>{tx(i)}</span>
                 </li>
               ))}
             </ul>
@@ -86,7 +88,7 @@ export function CompostPage() {
                     className="mt-0.5 h-4 w-4 shrink-0 text-[color:var(--color-terracotta)]"
                     aria-hidden
                   />
-                  <span>{i}</span>
+                  <span>{tx(i)}</span>
                 </li>
               ))}
             </ul>
@@ -98,7 +100,7 @@ export function CompostPage() {
           <ol className="mt-3 space-y-1.5 text-sm text-foreground/90">
             {COMPOST_HOW[lang].map((i, idx) => (
               <li key={i}>
-                {idx + 1}. {i}
+                {idx + 1}. {tx(i)}
               </li>
             ))}
           </ol>
