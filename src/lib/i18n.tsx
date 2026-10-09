@@ -1,6 +1,14 @@
 import { useNavigate, useRouterState } from "@tanstack/react-router";
 import { translatePath } from "@/lib/routes-i18n";
-import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
+import { createContext, useContext, useEffect, useRef, useState, type ReactNode } from "react";
+import { Globe, Check } from "lucide-react";
+import {
+  EXTRA_DICTS,
+  EXTRA_LANGS,
+  isExtraLang,
+  visibleExtraLangs,
+  type ExtraLang,
+} from "@/lib/i18n-extra";
 
 export type Lang = "nl" | "fr" | "en";
 
@@ -1609,7 +1617,11 @@ const DICTS: Record<Lang, Dict> = {
 /** Bijgehouden ontbrekende sleutels per taal — voor de diagnosepagina. */
 const missingKeys: Record<Lang, Set<string>> = { nl: new Set(), fr: new Set(), en: new Set() };
 
-function resolve(lang: Lang, k: string): string {
+function resolve(lang: Lang, k: string, extra?: ExtraLang | null): string {
+  if (extra) {
+    const hit = EXTRA_DICTS[extra]?.[k];
+    if (hit !== undefined) return hit;
+  }
   const own = DICTS[lang][k];
   if (own !== undefined) return own;
   missingKeys[lang].add(k);
@@ -1637,9 +1649,26 @@ export function getMissingI18nKeys(): Record<Lang, string[]> {
   };
 }
 
-const I18nCtx = createContext<{ lang: Lang; setLang: (l: Lang) => void; t: (k: string) => string }>(
-  { lang: "nl", setLang: () => {}, t: (k) => k },
-);
+type I18nValue = {
+  /** Basistaal van de URL (nl/fr/en). Extra talen gebruiken Engels als basis. */
+  lang: Lang;
+  setLang: (l: Lang) => void;
+  t: (k: string) => string;
+  /** Gekozen extra taal achter het wereldbolletje (of null). */
+  extra: ExtraLang | null;
+  setExtra: (x: ExtraLang | null) => void;
+  /** Kies uit een { nl, fr, en, de?, ar?, … }-object de juiste tekst. */
+  pick: <V>(obj: Partial<Record<Lang | ExtraLang, V>> & Record<Lang, V>) => V;
+};
+const I18nCtx = createContext<I18nValue>({
+  lang: "nl",
+  setLang: () => {},
+  t: (k) => k,
+  extra: null,
+  setExtra: () => {},
+  pick: (o) => o.nl,
+});
+const EXTRA_KEY = "user_extra_language";
 
 /** Bewaarde taalkeuze van de bezoeker. */
 const STORAGE_KEY = "user_preferred_language";
@@ -1657,9 +1686,11 @@ function langFromPath(pathname: string): Lang | null {
 }
 
 /** Houdt <html lang>, content-language en og:locale gelijk aan de actieve taal. */
-function syncDocumentLanguage(l: Lang) {
+function syncDocumentLanguage(l: Lang, extra?: ExtraLang | null) {
   if (typeof document === "undefined") return;
-  document.documentElement.lang = l;
+  const meta = extra ? EXTRA_LANGS.find((x) => x.code === extra) : null;
+  document.documentElement.lang = meta ? meta.htmlLang : l;
+  document.documentElement.dir = meta?.dir ?? "ltr";
   const set = (selector: string, attr: "content", value: string, create: () => HTMLMetaElement) => {
     let el = document.head.querySelector<HTMLMetaElement>(selector);
     if (!el) {
@@ -1682,6 +1713,32 @@ function syncDocumentLanguage(l: Lang) {
 
 export function I18nProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>("nl");
+  const [extra, setExtraState] = useState<ExtraLang | null>(null);
+
+  useEffect(() => {
+    try {
+      // ?taal=de laat een (nog niet vrijgegeven) taal voorvertonen.
+      const q = new URLSearchParams(window.location.search).get("taal");
+      const saved = q ?? localStorage.getItem(EXTRA_KEY);
+      if (isExtraLang(saved) && langFromPath(window.location.pathname) === "en") {
+        setExtraState(saved);
+        if (q) localStorage.setItem(EXTRA_KEY, q);
+      }
+    } catch {
+      /* noop */
+    }
+  }, []);
+
+  const setExtra = (x: ExtraLang | null) => {
+    setExtraState(x);
+    try {
+      if (x) localStorage.setItem(EXTRA_KEY, x);
+      else localStorage.removeItem(EXTRA_KEY);
+      document.cookie = `user_extra_lang=${x ?? ""}; path=/; max-age=${x ? 31536000 : 0}; samesite=lax`;
+    } catch {
+      /* noop */
+    }
+  };
 
   useEffect(() => {
     try {
@@ -1709,6 +1766,8 @@ export function I18nProvider({ children }: { children: ReactNode }) {
 
   const setLang = (l: Lang) => {
     setLangState(l);
+    // Een andere basistaal (behalve Engels als drager) zet de extra taal uit.
+    if (l !== "en") setExtra(null);
     try {
       localStorage.setItem(STORAGE_KEY, l);
       localStorage.setItem(LEGACY_KEY, l);
@@ -1724,14 +1783,17 @@ export function I18nProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     try {
-      syncDocumentLanguage(lang);
+      syncDocumentLanguage(lang, extra);
     } catch {
       /* noop */
     }
-  }, [lang]);
+  }, [lang, extra]);
 
-  const t = (k: string) => resolve(lang, k);
-  return <I18nCtx.Provider value={{ lang, setLang, t }}>{children}</I18nCtx.Provider>;
+  const t = (k: string) => resolve(lang, k, extra);
+  const pick: I18nValue["pick"] = (obj) => (extra && obj[extra] !== undefined ? obj[extra]! : obj[lang]);
+  return (
+    <I18nCtx.Provider value={{ lang, setLang, t, extra, setExtra, pick }}>{children}</I18nCtx.Provider>
+  );
 }
 
 export function useT() {
@@ -1742,12 +1804,14 @@ export function formatT(str: string, vars: Record<string, string | number>): str
   return str.replace(/\{(\w+)\}/g, (_, k) => (k in vars ? String(vars[k]) : `{${k}}`));
 }
 
-export function localeFor(lang: Lang): string {
+export function localeFor(lang: Lang | ExtraLang): string {
+  const x = EXTRA_LANGS.find((e) => e.code === lang);
+  if (x) return x.locale;
   return lang === "fr" ? "fr-BE" : lang === "en" ? "en-GB" : "nl-BE";
 }
 
 export function LanguageSwitcher({ className = "inline-flex" }: { className?: string }) {
-  const { lang, setLang } = useT();
+  const { lang, setLang, extra, setExtra } = useT();
   const navigate = useNavigate();
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   // Zoekparameters en anker blijven behouden (winkelmandje, filters, stappen).
@@ -1755,8 +1819,9 @@ export function LanguageSwitcher({ className = "inline-flex" }: { className?: st
   const hash = useRouterState({ select: (s) => s.location.hash });
   const codes: Lang[] = ["nl", "fr", "en"];
 
-  const switchTo = (c: Lang) => {
+  const switchTo = (c: Lang, keepExtra = false) => {
     setLang(c);
+    if (!keepExtra) setExtra(null);
     const first = pathname.split("/").filter(Boolean)[0];
     if (first !== "nl" && first !== "fr" && first !== "en") return;
     const suffix = `${searchStr && searchStr !== "?" ? (searchStr.startsWith("?") ? searchStr : `?${searchStr}`) : ""}${hash ? (hash.startsWith("#") ? hash : `#${hash}`) : ""}`;
@@ -1772,7 +1837,7 @@ export function LanguageSwitcher({ className = "inline-flex" }: { className?: st
       aria-label="Language"
     >
       {codes.map((c) => {
-        const active = c === lang;
+        const active = c === lang && !extra;
         return (
           <button
             key={c}
@@ -1796,6 +1861,97 @@ export function LanguageSwitcher({ className = "inline-flex" }: { className?: st
           </button>
         );
       })}
+      <MoreLanguages
+        extra={extra}
+        onPick={(x) => {
+          setExtra(x);
+          switchTo("en", true);
+        }}
+      />
+    </div>
+  );
+}
+
+/** Wereldbolletje met de extra talen (enkel volledig vertaalde talen zijn zichtbaar). */
+function MoreLanguages({
+  extra,
+  onPick,
+}: {
+  extra: ExtraLang | null;
+  onPick: (x: ExtraLang) => void;
+}) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  const list = visibleExtraLangs(extra);
+  useEffect(() => {
+    if (!open) return;
+    const close = (e: MouseEvent) => {
+      if (!ref.current?.contains(e.target as Node)) setOpen(false);
+    };
+    const esc = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    document.addEventListener("mousedown", close);
+    document.addEventListener("keydown", esc);
+    return () => {
+      document.removeEventListener("mousedown", close);
+      document.removeEventListener("keydown", esc);
+    };
+  }, [open]);
+  if (!list.length) return null;
+  const active = list.find((x) => x.code === extra);
+  return (
+    <div ref={ref} className="relative">
+      <button
+        type="button"
+        onClick={(e) => {
+          e.stopPropagation();
+          setOpen((o) => !o);
+        }}
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        aria-label="More languages · Plus de langues · Meer talen"
+        title="More languages · Plus de langues · Meer talen"
+        className={
+          "inline-flex items-center gap-1 rounded-full px-1.5 py-1 text-[11px] font-medium transition-colors sm:px-2 sm:text-xs " +
+          (active
+            ? "bg-primary font-bold text-primary-foreground shadow-sm"
+            : "text-muted-foreground hover:text-foreground")
+        }
+      >
+        <Globe className="size-3.5" aria-hidden="true" />
+        {active ? <span className="uppercase">{active.short}</span> : null}
+      </button>
+      {open ? (
+        <ul
+          role="listbox"
+          className="absolute end-0 top-full z-50 mt-2 max-h-80 w-56 overflow-auto rounded-2xl border border-border bg-popover p-1.5 text-popover-foreground shadow-lg"
+        >
+          {list.map((x) => (
+            <li key={x.code}>
+              <button
+                type="button"
+                role="option"
+                aria-selected={x.code === extra}
+                lang={x.htmlLang}
+                dir={x.dir}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setOpen(false);
+                  onPick(x.code);
+                }}
+                className="flex w-full items-center justify-between gap-3 rounded-xl px-3 py-2 text-start text-sm hover:bg-muted"
+              >
+                <span className="min-w-0">
+                  <span className="block truncate font-medium">{x.native}</span>
+                  <span className="block truncate text-xs text-muted-foreground" dir="ltr">
+                    {x.english}
+                  </span>
+                </span>
+                {x.code === extra ? <Check className="size-4 shrink-0 text-primary" /> : null}
+              </button>
+            </li>
+          ))}
+        </ul>
+      ) : null}
     </div>
   );
 }
