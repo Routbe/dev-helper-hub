@@ -136,8 +136,24 @@ const DAYS: Record<Lang, string[]> = {
 };
 
 export function VisitPage() {
-  const { lang } = useT();
-  const c = COPY[lang];
+  const { lang, tx } = useT();
+  const source = COPY[lang];
+  const c = {
+    ...source,
+    title: tx(source.title),
+    lede: tx(source.lede),
+    hours: tx(source.hours),
+    address: tx(source.address),
+    price: tx(source.price),
+    priceBody: source.priceBody.map(tx),
+    transport: tx(source.transport),
+    transportBody: source.transportBody.map(tx),
+    access: tx(source.access),
+    accessBody: source.accessBody.map(tx),
+    animalsCta: tx(source.animalsCta),
+    contactCta: tx(source.contactCta),
+    photos: tx(source.photos),
+  };
   const { data: org } = useSuspenseQuery(orgQO);
   const { data: hours } = useSuspenseQuery(hoursQO);
   const managed = useAlbumPhotos();
@@ -160,7 +176,7 @@ export function VisitPage() {
           <ul className="mt-4 divide-y divide-border text-sm">
             {schedule.map((h) => (
               <li key={`${h.day_of_week}-${h.open_time}`} className="flex justify-between py-2">
-                <span className="text-muted-foreground">{DAYS[lang][h.day_of_week] ?? ""}</span>
+                <span className="text-muted-foreground">{tx(DAYS[lang][h.day_of_week] ?? "")}</span>
                 <span className="font-medium text-foreground">
                   {String(h.open_time).slice(0, 5)} – {String(h.close_time).slice(0, 5)}
                 </span>
@@ -193,7 +209,7 @@ export function VisitPage() {
 
         <section className="mt-10">
           <PhotoCarousel
-            title={KIDS_TITLE[lang]}
+            title={tx(KIDS_TITLE[lang])}
             photos={mergedCarousel(
               [...PHOTO_ALBUMS.kinderen!, ...PHOTO_ALBUMS.speeltuin!, ...PHOTO_ALBUMS.educatie!],
               managed,

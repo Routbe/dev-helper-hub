@@ -84,6 +84,102 @@ const dePhrases: Record<string, string> = {
   "City of Brussels": "Stadt Brüssel",
   "Brussels Urban Agriculture": "Brüsseler Stadtlandwirtschaft",
   "Design & platform by": "Gestaltung & Plattform von",
+  // Besuch
+  "Children, playground & workshops": "Kinder, Spielplatz & Workshops",
+  "Visit & info": "Besuch & Infos",
+  "Everything you need before you come: hours, access, prices and transport.":
+    "Alles, was Sie vor Ihrem Besuch wissen müssen: Öffnungszeiten, Zugang, Preise und Anfahrt.",
+  Address: "Adresse",
+  Prices: "Preise",
+  "The farm is free to visit during opening hours.":
+    "Während der Öffnungszeiten ist der Besuch des Bauernhofs kostenlos.",
+  "Guided visits, workshops and school visits have separate rates — reduced rates are available.":
+    "Für Führungen, Workshops und Schulbesuche gelten eigene Tarife — Ermäßigungen sind möglich.",
+  "Getting here": "Anfahrt",
+  "Metro Yser (lines 2 and 6), an 8-minute walk.":
+    "Metro Yser (Linien 2 und 6), acht Minuten zu Fuß.",
+  "Tram 51 and buses 47, 88 stop at Maximilien Park.":
+    "Die Straßenbahn 51 und die Busse 47 und 88 halten am Maximilienpark.",
+  "Bicycle parking at the entrance; car parking nearby is limited.":
+    "Fahrradständer befinden sich am Eingang; Pkw-Parkplätze in der Umgebung sind begrenzt.",
+  "The main paths are wheelchair accessible.": "Die Hauptwege sind rollstuhlgerecht.",
+  "Dogs are not allowed, for the wellbeing of the animals.":
+    "Zum Wohl der Tiere sind Hunde nicht erlaubt.",
+  "Toilets and a baby-changing table at reception.":
+    "Toiletten und ein Wickeltisch befinden sich am Empfang.",
+  "Meet our animals": "Unsere Tiere kennenlernen",
+  "A question? Contact us": "Fragen? Kontaktieren Sie uns",
+  "Photos of the farmyard": "Impressionen vom Hof",
+  Sunday: "Sonntag",
+  Monday: "Montag",
+  Tuesday: "Dienstag",
+  Wednesday: "Mittwoch",
+  Thursday: "Donnerstag",
+  Friday: "Freitag",
+  Saturday: "Samstag",
+  // Tiere
+  "Our animals": "Unsere Tiere",
+  "Goats, sheep, donkeys, chickens and rabbits — each with their own character and story.":
+    "Ziegen, Schafe, Esel, Hühner und Kaninchen — jedes Tier mit eigenem Charakter und eigener Geschichte.",
+  "Back to all animals": "Zurück zu allen Tieren",
+  "Meet them": "Kennenlernen",
+  "Plan your visit": "Besuch planen",
+  "Photos from the farm": "Fotos vom Bauernhof",
+  "Kitchen garden, orchard & yard": "Gemüsegarten, Obstgarten & Hof",
+  Album: "Album",
+  // Bildung
+  "Education & schools": "Bildung & Schulen",
+  "The farm as a classroom: animals, kitchen garden, biodiversity and the cycle of life.":
+    "Der Bauernhof als Klassenzimmer: Tiere, Gemüsegarten, Artenvielfalt und der Kreislauf des Lebens.",
+  "What we offer": "Unser Angebot",
+  "Pre-school (2.5 – 6 years)": "Vorschule (2,5–6 Jahre)",
+  "Touching, feeding and caring for the animals. A 1.5-hour sensory introduction.":
+    "Tiere berühren, füttern und versorgen. Eine 90-minütige Entdeckungstour für alle Sinne.",
+  "Primary school": "Grundschule",
+  "From grass to milk, from seed to soup: discovering the cycle through activities in the stables and garden.":
+    "Vom Gras zur Milch, vom Samenkorn zur Suppe: den Kreislauf bei Aktivitäten in Stall und Garten entdecken.",
+  "Secondary & higher education": "Sekundar- & Hochschulbildung",
+  "Urban agriculture, animal welfare and social cohesion — with room for debate and project work.":
+    "Stadtlandwirtschaft, Tierwohl und sozialer Zusammenhalt — mit Raum für Diskussion und Projektarbeit.",
+  "Out-of-school groups": "Außerschulische Gruppen",
+  "Holiday camps, youth movements or neighbourhood groups: tailor-made activities.":
+    "Ferienangebote, Jugendgruppen oder Nachbarschaftsinitiativen: Aktivitäten nach Maß.",
+  "Farm themes": "Themen auf dem Bauernhof",
+  "Activities in English, Dutch or French.": "Aktivitäten auf Englisch, Niederländisch oder Französisch.",
+  "Maximum 25 pupils per guide; larger groups are split.":
+    "Höchstens 25 Schülerinnen und Schüler pro Betreuungsperson; größere Gruppen werden aufgeteilt.",
+  "Reduced rates available for Brussels schools.": "Ermäßigte Tarife für Brüsseler Schulen.",
+  "Book a school visit": "Schulbesuch buchen",
+  "Back to education": "Zurück zu Bildung",
+  "Tell us about your group and preferred date — we reply within a few working days.":
+    "Erzählen Sie uns von Ihrer Gruppe und Ihrem Wunschtermin — wir melden uns innerhalb weniger Werktage.",
+  "Question about a school visit?": "Fragen zu einem Schulbesuch?",
+  "Tell us the age group, number of pupils and preferred period — we'll quickly send a tailored proposal.":
+    "Nennen Sie uns Altersgruppe, Schülerzahl und Wunschzeitraum — wir senden Ihnen zeitnah ein passendes Angebot.",
+  "Animals & our 5 senses": "Tiere & unsere fünf Sinne",
+  "Touch, smell, look and listen on a discovery tour past alpacas, sheep and chickens.":
+    "Fühlen, riechen, schauen und lauschen bei einer Entdeckungstour zu Alpakas, Schafen und Hühnern.",
+  "Illustration of animals at the farm": "Illustration von Tieren auf dem Bauernhof",
+  "Bees & their hive": "Bienen & ihr Bienenstock",
+  "Learn about pollination, honey and why bees matter for our garden.":
+    "Erfahren Sie mehr über Bestäubung, Honig und die Bedeutung der Bienen für unseren Garten.",
+  "Illustration of bees and a beehive": "Illustration von Bienen und einem Bienenstock",
+  "The vegetable garden & its treasures": "Der Gemüsegarten & seine Schätze",
+  "Sowing, harvesting and tasting: from your own seed to fresh vegetables.":
+    "Säen, ernten und probieren: vom eigenen Samenkorn bis zum frischen Gemüse.",
+  "Illustration of a vegetable garden with vegetables": "Illustration eines Gemüsegartens mit Gemüse",
+  "Apple, pear & orchard fruit": "Apfel, Birne & Obst aus dem Garten",
+  "Discover fruit trees, harvesting and why an orchard is good for nature.":
+    "Obstbäume und Ernte entdecken und erfahren, warum ein Obstgarten gut für die Natur ist.",
+  "Illustration of fruit trees and harvest": "Illustration von Obstbäumen und Ernte",
+  "Compost & its little creatures": "Kompost & seine kleinen Bewohner",
+  "What goes on the compost heap? Worms, fungi and the cycle of organic waste.":
+    "Was gehört auf den Kompost? Würmer, Pilze und der Kreislauf organischer Abfälle.",
+  "Illustration of compost and worms": "Illustration von Kompost und Würmern",
+  "A day at the farm": "Ein Tag auf dem Bauernhof",
+  "From feeding animals to gardening: a full day of farm experiences.":
+    "Vom Füttern der Tiere bis zur Gartenarbeit: ein ganzer Tag voller Bauernhoferlebnisse.",
+  "Illustration of a day at the farm": "Illustration eines Tages auf dem Bauernhof",
 };
 
 export default dePhrases;
