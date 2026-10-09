@@ -1,6 +1,7 @@
 # Roadmap
 
-- [ ] Thema-audit: alle pagina's (bezoeker + admin) licht/donker, desktop/mobiel — geen witte vlakken, juiste kleuren per thema
+- [x] Thema-audit bezoekerspagina's licht/donker, desktop/gsm (perspagina wit vlak hersteld)
+- [ ] Thema-audit beheerdersportaal (wacht op aangemelde test als beheerder)
 - [ ] Taalkiezer: NL / FR / EN zichtbaar + wereldbolletje met extra talen
-- [ ] Extra talen handmatig vertaald (DE, AR (rechts-naar-links), TR, ES, IT, PT, PL, RO, Tamazight, + andere Brusselse talen) — volledige site incl. Academy
+- [ ] Extra talen handmatig vertaald, in stappen (eerst DE, AR (rechts-naar-links), TR; dan ES, IT, PT; dan PL, RO, Tamazight) — volledige site incl. Academy
 - [ ] Meertaligheid nalopen: overal ontbrekende vertalingen in NL/FR/EN
