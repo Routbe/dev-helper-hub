@@ -6,6 +6,7 @@ import {
   MastodonIcon,
   BlueskyIcon,
   KeycloakIcon,
+  RoutIcon,
 } from "@/components/auth/ProviderIcons";
 
 export type OAuthProvider =
@@ -14,7 +15,8 @@ export type OAuthProvider =
   | "gitlab"
   | "mastodon"
   | "bluesky"
-  | "keycloak";
+  | "keycloak"
+  | "rout";
 
 export const OAUTH_PROVIDERS: {
   id: OAuthProvider;
@@ -27,4 +29,5 @@ export const OAUTH_PROVIDERS: {
   { id: "mastodon", label: "Mastodon", Icon: MastodonIcon },
   { id: "bluesky", label: "Bluesky", Icon: BlueskyIcon },
   { id: "keycloak", label: "Keycloak", Icon: KeycloakIcon },
+  { id: "rout", label: "ROUT", Icon: RoutIcon },
 ];

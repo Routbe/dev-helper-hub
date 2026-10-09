@@ -7,7 +7,7 @@ import { createFileRoute } from "@tanstack/react-router";
  * welke aanbieder-specifieke startroute erachter zit, is een serverdetail.
  * Zo blijft de client losgekoppeld van de OAuth-implementatie.
  */
-const PROVIDERS = ["google", "github", "mastodon", "bluesky"] as const;
+const PROVIDERS = ["google", "github", "mastodon", "bluesky", "rout"] as const;
 
 export const Route = createFileRoute("/api/auth/login/$provider")({
   server: {
