@@ -3,7 +3,7 @@
  * resets, boekingsbevestigingen …).
  *
  * Afzender en reply-to komen uit de environment, met vaste huisstijl-fallbacks:
- *   BREVO_SENDER_NAME  → "Maxilien"
+ *   BREVO_SENDER_NAME  → "Maximilien"
  *   BREVO_SENDER_EMAIL → "no-reply@send.maximilien.site"
  *   BREVO_REPLY_TO     → "hallo@maximilien.brussels"
  *
@@ -11,7 +11,7 @@
  * de browserbundel); in de browser valt de helper terug op de defaults.
  */
 
-export const BREVO_DEFAULT_SENDER_NAME = "Maxilien";
+export const BREVO_DEFAULT_SENDER_NAME = "Maximilien";
 export const BREVO_DEFAULT_SENDER_EMAIL = "no-reply@send.maximilien.site";
 export const BREVO_DEFAULT_REPLY_TO = "hallo@maximilien.brussels";
 

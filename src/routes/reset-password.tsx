@@ -21,12 +21,12 @@ export const Route = createFileRoute("/reset-password")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "Nieuw wachtwoord — Maxilien" },
+      { title: "Nieuw wachtwoord — Maximilien" },
       {
         name: "description",
         content: "Kies een nieuw wachtwoord voor je toegang tot het beheerportaal.",
       },
-      { property: "og:title", content: "Nieuw wachtwoord — Maxilien" },
+      { property: "og:title", content: "Nieuw wachtwoord — Maximilien" },
       {
         property: "og:description",
         content: "Stel een nieuw wachtwoord in voor het beheerportaal.",

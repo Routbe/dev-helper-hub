@@ -87,7 +87,7 @@ const COPY = {
     items: "Inhoud",
     hint: "Toon deze QR-code aan het team op de stadsboerderij.",
     payHint: "Betaal contant of via Payconiq aan de kassa bij het ophalen.",
-    where: "Maxilien · Quai du Batelage 4, 1000 Brussel",
+    where: "Maximilien · Quai du Batelage 4, 1000 Brussel",
   },
   fr: {
     title: "PASS DE RETRAIT",
@@ -97,7 +97,7 @@ const COPY = {
     items: "Contenu",
     hint: "Montrez ce QR code à l'équipe de la ferme urbaine.",
     payHint: "Payez en espèces ou via Payconiq à la caisse lors du retrait.",
-    where: "Maxilien · Quai du Batelage 4, 1000 Bruxelles",
+    where: "Maximilien · Quai du Batelage 4, 1000 Bruxelles",
   },
   en: {
     title: "PICKUP PASS",
@@ -107,7 +107,7 @@ const COPY = {
     items: "Contents",
     hint: "Show this QR code to the team at the city farm.",
     payHint: "Pay in cash or via Payconiq at the counter when collecting.",
-    where: "Maxilien · Quai du Batelage 4, 1000 Brussels",
+    where: "Maximilien · Quai du Batelage 4, 1000 Brussels",
   },
 } as const;
 

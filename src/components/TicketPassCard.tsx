@@ -132,12 +132,12 @@ export const TicketPassCard = forwardRef<HTMLDivElement, TicketPassData>(functio
         <img loading="lazy"
           src={PASS_BRAND.logo}
           onError={handleImageError}
-          alt="Maxilien"
+          alt="Maximilien"
           crossOrigin="anonymous"
           className="h-10 w-10 rounded-full bg-white/10 object-contain"
         />
         <div className="text-sm font-semibold leading-tight">
-          Maxilien
+          Maximilien
           <span className="block text-[11px] font-normal uppercase tracking-[0.18em] text-white/90">
             vzw · Brussel
           </span>

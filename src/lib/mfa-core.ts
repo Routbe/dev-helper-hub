@@ -77,8 +77,8 @@ export async function verifyTotp(secret: string, code: string, now = Date.now())
 }
 
 export function otpauthUri(secret: string, email: string): string {
-  const label = encodeURIComponent(`Maxilien:${email}`);
-  return `otpauth://totp/${label}?secret=${secret}&issuer=Maxilien&algorithm=SHA1&digits=6&period=30`;
+  const label = encodeURIComponent(`Maximilien:${email}`);
+  return `otpauth://totp/${label}?secret=${secret}&issuer=Maximilien&algorithm=SHA1&digits=6&period=30`;
 }
 
 export function randomSixDigits(): string {
@@ -97,7 +97,7 @@ export function normalizeBelgianMobile(input: string): string | null {
   return `+32${d}`;
 }
 
-/** Het ontvangende nummer van Maxilien voor buitenlandse verificaties. */
+/** Het ontvangende nummer van Maximilien voor buitenlandse verificaties. */
 export const VERIFY_PHONE = "+32486353111";
 /** Messenger heeft een gebruikersnaam nodig; leeg = Messenger openen en bericht kopiëren. */
 export const MESSENGER_USERNAME = "";

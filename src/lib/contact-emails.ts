@@ -83,7 +83,7 @@ export function buildMailto({
 }): string {
   const subject = `${topic} — ${name || "Bezoeker"}`;
   const lines = [
-    `Beste team van Maxilien,`,
+    `Beste team van Maximilien,`,
     ``,
     message.trim(),
     ``,

@@ -9,7 +9,7 @@ import { handleImageError } from "@/lib/image-fallback";
  */
 export function MLogo({
   className = "h-10 w-auto",
-  title = "Maxilien",
+  title = "Maximilien",
   variant = "brand",
 }: {
   className?: string;

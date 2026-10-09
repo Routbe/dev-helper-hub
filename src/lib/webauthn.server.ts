@@ -73,7 +73,7 @@ export async function webauthnContext(): Promise<{ rpID: string; rpName: string;
   } catch {
     rpID = "maximilien.brussels";
   }
-  return { rpID, rpName: "Maxilien", origin };
+  return { rpID, rpName: "Maximilien", origin };
 }
 
 /** Slaat een nieuwe challenge op met een korte vervaltijd. */

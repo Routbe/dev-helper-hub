@@ -302,7 +302,7 @@ export function SiteFooter() {
 
         {/* Statische copyrightregel — geen verborgen doorverwijzing naar het beheerportaal. */}
         <p className="mt-4 uppercase tracking-[0.25em]">
-          © 2026 Maxilien.{" "}
+          © 2026 Maximilien.{" "}
           {{
             nl: "Alle rechten voorbehouden.",
             fr: "Tous droits réservés.",

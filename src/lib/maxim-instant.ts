@@ -738,9 +738,9 @@ export function nextChipSet(id: QuickActionId): ChipSet {
 
 /** Begroeting die strikt de taal van de pagina volgt. */
 export const GREETING: Record<Lang, string> = {
-  nl: "Hallo! Ik ben Maxim, jouw gids op Maxilien. Waarmee kan ik je helpen?",
-  fr: "Bonjour ! Je suis Maxim, votre guide à Maxilien. Comment puis-je vous aider ?",
-  en: "Hello! I am Maxim, your guide at Maxilien. How can I help you today?",
+  nl: "Hallo! Ik ben Maxim, jouw gids op Maximilien. Waarmee kan ik je helpen?",
+  fr: "Bonjour ! Je suis Maxim, votre guide à Maximilien. Comment puis-je vous aider ?",
+  en: "Hello! I am Maxim, your guide at Maximilien. How can I help you today?",
 };
 
 /** Infomaniak AI brand badge. */

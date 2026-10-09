@@ -88,9 +88,9 @@ const BANNERS: {
 
 function embedCode(banner: (typeof BANNERS)[number], lang: Lang): string {
   const alt = {
-    nl: "Maxilien — stadsboerderij in hartje Brussel",
-    fr: "Maxilien — ferme urbaine au cœur de Bruxelles",
-    en: "Maxilien — city farm in the heart of Brussels",
+    nl: "Maximilien — stadsboerderij in hartje Brussel",
+    fr: "Maximilien — ferme urbaine au cœur de Bruxelles",
+    en: "Maximilien — city farm in the heart of Brussels",
   }[lang];
   return `<a href="${SITE_URL}" target="_blank" rel="noopener">
   <img src="${SITE_URL}${banner.png}" width="${banner.width}" height="${banner.height}" alt="${alt}" style="max-width:100%;height:auto;border:0" />

@@ -18,12 +18,12 @@ export const Route = createFileRoute("/inloglink")({
   validateSearch: (search) => searchSchema.parse(search),
   head: () => ({
     meta: [
-      { title: "Inloglink — Maxilien" },
+      { title: "Inloglink — Maximilien" },
       {
         name: "description",
         content: "We bevestigen je eenmalige inloglink en brengen je naar je account.",
       },
-      { property: "og:title", content: "Inloglink — Maxilien" },
+      { property: "og:title", content: "Inloglink — Maximilien" },
       { property: "og:description", content: "Je eenmalige inloglink wordt bevestigd." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

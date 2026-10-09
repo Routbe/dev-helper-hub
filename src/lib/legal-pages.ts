@@ -30,7 +30,7 @@ export const PRIVACY_DOC: Record<Lang, LegalDoc> = {
       {
         h: "1. Verwerkingsverantwoordelijke",
         p: [
-          "Maxilien vzw, Schipperijkaai 2, 1000 Brussel, ondernemingsnummer BE 0446.485.159, is verantwoordelijk voor de verwerking van je persoonsgegevens.",
+          "Maximilien vzw, Schipperijkaai 2, 1000 Brussel, ondernemingsnummer BE 0446.485.159, is verantwoordelijk voor de verwerking van je persoonsgegevens.",
           "Contact voor privacyvragen: contact@maximilien.brussels.",
         ],
       },
@@ -115,7 +115,7 @@ export const PRIVACY_DOC: Record<Lang, LegalDoc> = {
       {
         h: "1. Responsable du traitement",
         p: [
-          "L'ASBL Maxilien, Quai du Batelage 2, 1000 Bruxelles, numéro d'entreprise BE 0446.485.159, est responsable du traitement de vos données à caractère personnel.",
+          "L'ASBL Maximilien, Quai du Batelage 2, 1000 Bruxelles, numéro d'entreprise BE 0446.485.159, est responsable du traitement de vos données à caractère personnel.",
           "Contact pour les questions de confidentialité : contact@maximilien.brussels.",
         ],
       },
@@ -200,7 +200,7 @@ export const PRIVACY_DOC: Record<Lang, LegalDoc> = {
       {
         h: "1. Data controller",
         p: [
-          "Maxilien non-profit (ASBL/VZW), Quai du Batelage 2, 1000 Brussels, company number BE 0446.485.159, is the controller of your personal data.",
+          "Maximilien non-profit (ASBL/VZW), Quai du Batelage 2, 1000 Brussels, company number BE 0446.485.159, is the controller of your personal data.",
           "Privacy contact: contact@maximilien.brussels.",
         ],
       },
@@ -288,7 +288,7 @@ export const TERMS_DOC: Record<Lang, LegalDoc> = {
       {
         h: "1. Toepassing",
         p: [
-          "Deze voorwaarden gelden voor elke reservatie, inschrijving en bestelling bij Maxilien vzw, Schipperijkaai 2, 1000 Brussel, BE 0446.485.159.",
+          "Deze voorwaarden gelden voor elke reservatie, inschrijving en bestelling bij Maximilien vzw, Schipperijkaai 2, 1000 Brussel, BE 0446.485.159.",
           "Afwijkingen gelden enkel wanneer we ze schriftelijk bevestigen. Bij tegenstrijdigheid heeft de schriftelijke offerte voorrang op deze voorwaarden.",
         ],
       },
@@ -384,7 +384,7 @@ export const TERMS_DOC: Record<Lang, LegalDoc> = {
       {
         h: "1. Champ d'application",
         p: [
-          "Ces conditions s'appliquent à toute réservation, inscription et commande auprès de l'ASBL Maxilien, Quai du Batelage 2, 1000 Bruxelles, BE 0446.485.159.",
+          "Ces conditions s'appliquent à toute réservation, inscription et commande auprès de l'ASBL Maximilien, Quai du Batelage 2, 1000 Bruxelles, BE 0446.485.159.",
           "Toute dérogation doit être confirmée par écrit. En cas de contradiction, l'offre écrite prime sur les présentes conditions.",
         ],
       },
@@ -479,7 +479,7 @@ export const TERMS_DOC: Record<Lang, LegalDoc> = {
       {
         h: "1. Scope",
         p: [
-          "These terms apply to every booking, registration and order with Maxilien non-profit, Quai du Batelage 2, 1000 Brussels, BE 0446.485.159.",
+          "These terms apply to every booking, registration and order with Maximilien non-profit, Quai du Batelage 2, 1000 Brussels, BE 0446.485.159.",
           "Any departure from them applies only when we confirm it in writing. In case of conflict, the written quote prevails over these terms.",
         ],
       },

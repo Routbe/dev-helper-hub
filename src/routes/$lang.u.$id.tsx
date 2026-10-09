@@ -8,9 +8,9 @@ const profileQO = (id: string) =>
   queryOptions({ queryKey: ["public-profile", id], queryFn: () => getPublicProfile({ data: { id } }) });
 
 const T: Record<Lang, { title: (n: string) => string; desc: string; anon: string; priv: string }> = {
-  nl: { title: (n) => `${n} — profiel bij Maxilien`, desc: "Badges, certificaten en tijdlijn op de stadsboerderij Maxilien.", anon: "Boerderijvriend", priv: "Privéprofiel — Maxilien" },
-  fr: { title: (n) => `${n} — profil chez Maxilien`, desc: "Badges, certificats et fil d'activité à la ferme urbaine Maxilien.", anon: "Ami de la ferme", priv: "Profil privé — Maxilien" },
-  en: { title: (n) => `${n} — profile at Maxilien`, desc: "Badges, certificates and timeline at city farm Maxilien.", anon: "Farm friend", priv: "Private profile — Maxilien" },
+  nl: { title: (n) => `${n} — profiel bij Maximilien`, desc: "Badges, certificaten en tijdlijn op de stadsboerderij Maximilien.", anon: "Boerderijvriend", priv: "Privéprofiel — Maximilien" },
+  fr: { title: (n) => `${n} — profil chez Maximilien`, desc: "Badges, certificats et fil d'activité à la ferme urbaine Maximilien.", anon: "Ami de la ferme", priv: "Profil privé — Maximilien" },
+  en: { title: (n) => `${n} — profile at Maximilien`, desc: "Badges, certificates and timeline at city farm Maximilien.", anon: "Farm friend", priv: "Private profile — Maximilien" },
 };
 
 export const Route = createFileRoute("/$lang/u/$id")({

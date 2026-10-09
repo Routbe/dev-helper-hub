@@ -6,7 +6,7 @@
 const ORG_ID = 1;
 
 const FALLBACK = {
-  naam: "ASBL Maxilien",
+  naam: "ASBL Maximilien",
   iban: "BE00 0000 0000 0000",
   bic: "GEBABEBB",
 };

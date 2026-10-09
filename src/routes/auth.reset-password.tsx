@@ -22,14 +22,14 @@ export const Route = createFileRoute("/auth/reset-password")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "Wachtwoord instellen — Beheerportaal Maxilien" },
+      { title: "Wachtwoord instellen — Beheerportaal Maximilien" },
       {
         name: "description",
-        content: "Stel je wachtwoord in voor het beheerportaal van Maxilien.",
+        content: "Stel je wachtwoord in voor het beheerportaal van Maximilien.",
       },
       {
         property: "og:title",
-        content: "Wachtwoord instellen — Beheerportaal Maxilien",
+        content: "Wachtwoord instellen — Beheerportaal Maximilien",
       },
       {
         property: "og:description",
@@ -88,7 +88,7 @@ function PortalPasswordPage() {
           </Link>
           <h1 className="font-display mt-3 text-xl font-bold">Beheerportaal</h1>
           <p className="text-sm text-muted-foreground">
-            Stel je wachtwoord in voor het beheerportaal van Maxilien.
+            Stel je wachtwoord in voor het beheerportaal van Maximilien.
           </p>
         </div>
         <AuthCard>

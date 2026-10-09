@@ -17,7 +17,7 @@ import {
 } from "./smtp.server";
 
 /** Zichtbare afzendernaam voor élke uitgaande mail. */
-export const FROM_NAME = "Maxilien";
+export const FROM_NAME = "Maximilien";
 
 /* --------------------------- Tijdschild (timeouts) ------------------------ */
 /** Brevo REST-oproep: max. 8 s. */

@@ -15,9 +15,9 @@ const LABEL: Record<Lang, string> = {
 };
 
 const TITLE: Record<Lang, string> = {
-  nl: "Mijn bezoekroute — Maxilien",
-  fr: "Mon parcours — Maxilien",
-  en: "My visit route — Maxilien",
+  nl: "Mijn bezoekroute — Maximilien",
+  fr: "Mon parcours — Maximilien",
+  en: "My visit route — Maximilien",
 };
 
 const FOOTER: Record<Lang, string> = {

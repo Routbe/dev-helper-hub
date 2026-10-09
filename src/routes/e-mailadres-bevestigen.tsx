@@ -15,12 +15,12 @@ export const Route = createFileRoute("/e-mailadres-bevestigen")({
   validateSearch: (search) => searchSchema.parse(search),
   head: () => ({
     meta: [
-      { title: "E-mailadres bevestigen — Maxilien" },
+      { title: "E-mailadres bevestigen — Maximilien" },
       {
         name: "description",
         content: "Bevestig je nieuwe e-mailadres voor je account bij de boerderij.",
       },
-      { property: "og:title", content: "E-mailadres bevestigen — Maxilien" },
+      { property: "og:title", content: "E-mailadres bevestigen — Maximilien" },
       { property: "og:description", content: "Bevestig je nieuwe e-mailadres." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

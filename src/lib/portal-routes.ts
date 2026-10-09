@@ -105,86 +105,86 @@ export const DEFAULT_LANG: Lang = "nl";
 /** Per-page head metadata (Dutch, portal is internal & noindex). */
 export const PAGE_META: Record<PortalPage, { title: string; description: string }> = {
   today: {
-    title: "Vandaag — Beheerportaal Maxilien",
+    title: "Vandaag — Beheerportaal Maximilien",
     description:
       "Dagoverzicht voor het terreinteam: groepen, bezoekers, gereserveerde zones en check-ins.",
   },
   requests: {
-    title: "Aanvragen (CRM) — Beheerportaal Maxilien",
+    title: "Aanvragen (CRM) — Beheerportaal Maximilien",
     description:
       "Beheer teambuilding-, privatiserings- en zaalverhuuraanvragen via kanban of tabel.",
   },
   calendar: {
-    title: "Kalender & Bezetting — Beheerportaal Maxilien",
+    title: "Kalender & Bezetting — Beheerportaal Maximilien",
     description:
       "Visuele bezetting per ruimte, slots blokkeren voor onderhoud en handmatige reservaties toevoegen.",
   },
   services: {
-    title: "Diensten & Tarieven — Beheerportaal Maxilien",
+    title: "Diensten & Tarieven — Beheerportaal Maximilien",
     description:
       "Pas prijzen, drietalige beschrijvingen en zichtbaarheid van arrangementen aan zonder code.",
   },
   shop: {
-    title: "Producten & Webshop — Beheerportaal Maxilien",
+    title: "Producten & Webshop — Beheerportaal Maximilien",
     description:
       "Beheer hoevewinkelproducten, prijzen, voorraad en volg de binnenkomende bestellingen op.",
   },
   pickups: {
-    title: "Afhalingen — Beheerportaal Maxilien",
+    title: "Afhalingen — Beheerportaal Maximilien",
     description:
       "Valideer afhaalcodes aan de balie en vink openstaande bestellingen af.",
   },
   academy: {
-    title: "Academies — Beheerportaal Maxilien",
+    title: "Academies — Beheerportaal Maximilien",
     description:
       "Beheer academykaarten en quizvragen in NL/FR/EN, bekijk de preview zoals bezoekers ze zien en vraag goedkeuring om live te gaan.",
   },
   results: {
-    title: "Academy-resultaten — Beheerportaal Maxilien",
+    title: "Academy-resultaten — Beheerportaal Maximilien",
     description:
       "Vergelijk slagingspercentages, uitvalmomenten en gemiddelde scores per dier, leeftijdscategorie en taal.",
   },
   social: {
-    title: "Social — Beheerportaal Maxilien",
+    title: "Social — Beheerportaal Maximilien",
     description:
       "Beheer Bluesky-berichten en eigen social posts, en de centrale beeldbank voor alle media.",
   },
   albums: {
-    title: "Fotoalbums — Beheerportaal Maxilien",
+    title: "Fotoalbums — Beheerportaal Maximilien",
     description:
       "Voeg foto's toe per thema of per dier, pas de volgorde en bijschriften aan, en verwijder beelden uit de opslag.",
   },
   residents: {
-    title: "Bewoners & dieren — Beheerportaal Maxilien",
+    title: "Bewoners & dieren — Beheerportaal Maximilien",
     description:
       "Beheer de dieren van de boerderij: naam, soort, verhaaltje en profielfoto voor 'De bewoners' op de site.",
   },
   team: {
-    title: "Teambeheer — Beheerportaal Maxilien",
+    title: "Teambeheer — Beheerportaal Maximilien",
     description: "Beheer teamprofielen, rollen (Admin/Team) en toegang tot het beheerportaal.",
   },
   email: {
-    title: "E-mail & mailserver — Beheerportaal Maxilien",
+    title: "E-mail & mailserver — Beheerportaal Maximilien",
     description:
       "Stel de mailserver in, verstuur een testmail en bekijk waarom een mail eventueel niet aankwam.",
   },
   site: {
-    title: "Site — Beheerportaal Maxilien",
+    title: "Site — Beheerportaal Maximilien",
     description:
       "Zet publieke pagina's of modules tijdelijk uit, beheer de onderhoudsmodus en de aankondigingsbalk.",
   },
   log: {
-    title: "Logboek & prullenbak — Beheerportaal Maxilien",
+    title: "Logboek & prullenbak — Beheerportaal Maximilien",
     description:
       "Bekijk wie wat wijzigde in het portaal en herstel per ongeluk verwijderde items binnen 30 dagen.",
   },
   api: {
-    title: "API & Integraties — Beheerportaal Maxilien",
+    title: "API & Integraties — Beheerportaal Maximilien",
     description:
       "Beheer API-sleutels voor externe integraties met de hoevewinkel, boekingen en Maxim-kennisbank.",
   },
   copilot: {
-    title: "Admin Co-Pilot — Beheerportaal Maxilien",
+    title: "Admin Co-Pilot — Beheerportaal Maximilien",
     description:
       "Vraag de AI Co-Pilot om site-instellingen, tarieven, openingsuren, pagina-afbeeldingen of e-mailsjablonen aan te passen.",
   },

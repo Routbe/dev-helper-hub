@@ -100,9 +100,9 @@ function authPlainText(
 ): string {
   const copy = AUTH_MAIL_COPY[lang][kind];
   const AUTO_LINE: Record<MailLang, string> = {
-    nl: "Dit is een automatisch gegenereerde inlogaanvraag van Maxilien. Je hoeft hier niet op te antwoorden.",
-    fr: "Ceci est une demande de connexion générée automatiquement par Maxilien. Il n'est pas nécessaire d'y répondre.",
-    en: "This is an automated sign-in request from Maxilien. No reply is needed.",
+    nl: "Dit is een automatisch gegenereerde inlogaanvraag van Maximilien. Je hoeft hier niet op te antwoorden.",
+    fr: "Ceci est une demande de connexion générée automatiquement par Maximilien. Il n'est pas nécessaire d'y répondre.",
+    en: "This is an automated sign-in request from Maximilien. No reply is needed.",
   };
   const CODE_LINE: Record<MailLang, string> = {
     nl: `Je 6-cijferige inlogcode: ${code}`,

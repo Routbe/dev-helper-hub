@@ -12,7 +12,7 @@ export const WALLET_CONFIG = {
   backgroundColor: "#1D3528",
   logoUri: "https://maximilien.dlp.li/logo.png",
   location: { latitude: 50.85885, longitude: 4.350356 },
-  locationName: "Maxilien",
+  locationName: "Maximilien",
   homepage: "https://maximilien.brussels",
   origins: ["https://maximilien.brussels", "https://maximilien.site"],
   verifyBase: "https://maximilien.brussels/verify",

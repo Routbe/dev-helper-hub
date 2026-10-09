@@ -113,7 +113,7 @@ export async function buildSystemEmailPreviews(langs: MailLang[]): Promise<Syste
         doel: { nl: "Peterschap alpaca Nino", fr: "Parrainage alpaga Nino", en: "Sponsorship alpaca Nino" }[lang],
         iban: "BE12 3456 7890 1234",
         bic: "GEBABEBB",
-        begunstigde: "Maxilien vzw",
+        begunstigde: "Maximilien vzw",
         lang,
       }),
     );

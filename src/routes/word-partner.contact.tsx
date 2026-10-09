@@ -10,13 +10,13 @@ import { useT, type Lang } from "@/lib/i18n";
 export const Route = createFileRoute("/word-partner/contact")({
   head: () => ({
     meta: [
-      { title: "Partnerschap aanvragen — Maxilien" },
+      { title: "Partnerschap aanvragen — Maximilien" },
       {
         name: "description",
         content:
           "Vul het intakeformulier in en we nemen contact op met een partnervoorstel op maat.",
       },
-      { property: "og:title", content: "Partnerschap aanvragen — Maxilien" },
+      { property: "og:title", content: "Partnerschap aanvragen — Maximilien" },
       {
         property: "og:description",
         content: "Intakeformulier voor bedrijven en organisaties die partner willen worden.",

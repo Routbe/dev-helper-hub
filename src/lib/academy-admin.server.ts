@@ -32,7 +32,7 @@ const shell = (title: string, body: string) => `
   <div style="font-family:system-ui,sans-serif;max-width:560px;margin:0 auto;padding:24px;color:#1f2a24">
     <h1 style="font-size:19px;margin:0 0 12px">${title}</h1>
     ${body}
-    <p style="margin-top:24px;font-size:12px;color:#6b7d73">Beheerportaal — Maxilien</p>
+    <p style="margin-top:24px;font-size:12px;color:#6b7d73">Beheerportaal — Maximilien</p>
   </div>`;
 
 /** Mail naar de verantwoordelijke(n) met de vraag om een kaart live te zetten. */

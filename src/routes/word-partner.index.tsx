@@ -6,13 +6,13 @@ import { useT, type Lang } from "@/lib/i18n";
 export const Route = createFileRoute("/word-partner/")({
   head: () => ({
     meta: [
-      { title: "Word partner — Maxilien" },
+      { title: "Word partner — Maximilien" },
       {
         name: "description",
         content:
           "Sponsoring, MVO en teambuilding: word partner van de stadsboerderij in hartje Brussel.",
       },
-      { property: "og:title", content: "Word partner — Maxilien" },
+      { property: "og:title", content: "Word partner — Maximilien" },
       {
         property: "og:description",
         content: "Bedrijven en organisaties ondersteunen de stadsboerderij: ontdek hoe.",

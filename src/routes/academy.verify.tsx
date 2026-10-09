@@ -26,7 +26,7 @@ export const Route = createFileRoute("/academy/verify")({
       {
         name: "description",
         content:
-          "Controleer of een Junior Boerderij Diploma van de stadsboerderij Maxilien echt is.",
+          "Controleer of een Junior Boerderij Diploma van de stadsboerderij Maximilien echt is.",
       },
       { property: "og:title", content: "Junior diploma verifiëren" },
       {
@@ -50,7 +50,7 @@ function AcademyVerifyPage() {
     nl: {
       title: "Diploma controleren",
       ok: "Geldig diploma",
-      issuer: "Officieel Junior Boerderij Diploma van Maxilien",
+      issuer: "Officieel Junior Boerderij Diploma van Maximilien",
       note: "Kinderdiploma's bevatten geen persoonsgegevens: enkel de code wordt gecontroleerd.",
       bad: "Deze code hoort niet bij een Junior Boerderij Diploma.",
       adult: "Zoek je een certificaat van een volwassene? Gebruik de gewone verificatiepagina.",
@@ -59,7 +59,7 @@ function AcademyVerifyPage() {
     fr: {
       title: "Vérifier le diplôme",
       ok: "Diplôme valide",
-      issuer: "Diplôme Junior officiel de la Maxilien",
+      issuer: "Diplôme Junior officiel de la Maximilien",
       note: "Les diplômes des enfants ne contiennent aucune donnée personnelle : seul le code est vérifié.",
       bad: "Ce code ne correspond pas à un diplôme Junior de la ferme.",
       adult: "Vous cherchez un certificat adulte ? Utilisez la page de vérification habituelle.",
@@ -68,7 +68,7 @@ function AcademyVerifyPage() {
     en: {
       title: "Verify diploma",
       ok: "Valid diploma",
-      issuer: "Official Junior Farm Diploma from Maxilien",
+      issuer: "Official Junior Farm Diploma from Maximilien",
       note: "Children's diplomas hold no personal data: only the code is checked.",
       bad: "This code does not belong to a Junior Farm Diploma.",
       adult: "Looking for an adult certificate? Use the regular verification page.",

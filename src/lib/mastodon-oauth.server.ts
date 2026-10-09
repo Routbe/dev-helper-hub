@@ -10,7 +10,7 @@ import { normalizeEmail } from "./local-auth.server";
 import { authOrigin } from "./google-oauth.server";
 import type { SocialProfile } from "./social-oauth.server";
 
-export const MASTODON_APP_NAME = "Maxilien";
+export const MASTODON_APP_NAME = "Maximilien";
 export const MASTODON_SCOPE = "read:accounts";
 export const MASTODON_INSTANCE_COOKIE = "maximilien_oauth_instance";
 

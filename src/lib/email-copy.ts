@@ -103,7 +103,7 @@ export const MAIL_COPY: Record<MailLang, Copy> = {
       cta: "Bekijk onze doelen",
     },
     verify: {
-      subject: "Bevestig je e-mailadres — Maxilien",
+      subject: "Bevestig je e-mailadres — Maximilien",
       preview: "Bevestig je e-mailadres om je account te activeren.",
       kicker: "Account",
       title: "Bevestig je e-mailadres",
@@ -114,7 +114,7 @@ export const MAIL_COPY: Record<MailLang, Copy> = {
         "Deze link is 24 uur geldig en kan één keer gebruikt worden. Heb jij geen account aangemaakt? Dan mag je deze mail gerust negeren — er gebeurt niets.",
     },
     reset: {
-      subject: "Nieuw wachtwoord instellen — Maxilien",
+      subject: "Nieuw wachtwoord instellen — Maximilien",
       preview: "Stel een nieuw wachtwoord in voor je account.",
       kicker: "Accountbeveiliging",
       title: "Nieuw wachtwoord instellen",
@@ -163,7 +163,7 @@ export const MAIL_COPY: Record<MailLang, Copy> = {
       cta: "Voir nos projets",
     },
     verify: {
-      subject: "Confirmez votre adresse e-mail — Maxilien",
+      subject: "Confirmez votre adresse e-mail — Maximilien",
       preview: "Confirmez votre adresse e-mail pour activer votre compte.",
       kicker: "Compte",
       title: "Confirmez votre adresse e-mail",
@@ -174,7 +174,7 @@ export const MAIL_COPY: Record<MailLang, Copy> = {
         "Ce lien est valable 24 heures et ne peut être utilisé qu'une seule fois. Vous n'avez pas créé de compte ? Ignorez simplement cet e-mail.",
     },
     reset: {
-      subject: "Définir un nouveau mot de passe — Maxilien",
+      subject: "Définir un nouveau mot de passe — Maximilien",
       preview: "Définissez un nouveau mot de passe pour votre compte.",
       kicker: "Sécurité du compte",
       title: "Définir un nouveau mot de passe",
@@ -223,7 +223,7 @@ export const MAIL_COPY: Record<MailLang, Copy> = {
       cta: "See our goals",
     },
     verify: {
-      subject: "Confirm your email address — Maxilien",
+      subject: "Confirm your email address — Maximilien",
       preview: "Confirm your email address to activate your account.",
       kicker: "Account",
       title: "Confirm your email address",
@@ -234,7 +234,7 @@ export const MAIL_COPY: Record<MailLang, Copy> = {
         "This link is valid for 24 hours and can be used once. Didn't create an account? You can safely ignore this email.",
     },
     reset: {
-      subject: "Set a new password — Maxilien",
+      subject: "Set a new password — Maximilien",
       preview: "Set a new password for your account.",
       kicker: "Account security",
       title: "Set a new password",

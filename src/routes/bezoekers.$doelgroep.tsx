@@ -14,7 +14,7 @@ export const Route = createFileRoute("/bezoekers/$doelgroep")({
     if (!loaderData) {
       return {
         meta: [
-          { title: "Bezoekers — Maxilien" },
+          { title: "Bezoekers — Maximilien" },
           { name: "robots", content: "noindex" },
         ],
       };
@@ -23,7 +23,7 @@ export const Route = createFileRoute("/bezoekers/$doelgroep")({
     const desc = entry.lede.slice(0, 155);
     return {
       meta: [
-        { title: `${entry.title} — Maxilien` },
+        { title: `${entry.title} — Maximilien` },
         { name: "description", content: desc },
         { property: "og:title", content: entry.title },
         { property: "og:description", content: desc },

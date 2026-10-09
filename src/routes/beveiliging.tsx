@@ -37,10 +37,10 @@ export const Route = createFileRoute("/beveiliging")({
   validateSearch: (s) => z.object({ next: z.string().optional() }).parse(s),
   head: () => ({
     meta: [
-      { title: "Account beveiligen — Maxilien" },
-      { name: "description", content: "Stel je tweestapsverificatie in of bevestig je aanmelding bij Maxilien." },
-      { property: "og:title", content: "Account beveiligen — Maxilien" },
-      { property: "og:description", content: "Tweestapsverificatie voor je Maxilien-account." },
+      { title: "Account beveiligen — Maximilien" },
+      { name: "description", content: "Stel je tweestapsverificatie in of bevestig je aanmelding bij Maximilien." },
+      { property: "og:title", content: "Account beveiligen — Maximilien" },
+      { property: "og:description", content: "Tweestapsverificatie voor je Maximilien-account." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "robots", content: "noindex" },
@@ -170,7 +170,7 @@ function SecurityPage() {
     <Shell title="Hoe wil je je account beveiligen?">
       <p className="text-sm text-muted-foreground">
         {status.required
-          ? "Als medewerker van Maxilien is een tweede stap verplicht. Naast je wachtwoord bevestig je voortaan met één van deze methodes."
+          ? "Als medewerker van Maximilien is een tweede stap verplicht. Naast je wachtwoord bevestig je voortaan met één van deze methodes."
           : "Voeg een tweede stap toe, zodat enkel jij kan aanmelden — ook als iemand je wachtwoord kent."}
       </p>
       {!method && (
