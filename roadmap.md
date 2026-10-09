@@ -1,0 +1,23 @@
+# Roadmap
+
+- [x] Taalroute en expliciete quiztaal afdwingen
+- [x] Quizselectie, drie rondes, voortgang en feedback verbeteren
+- [x] Beheer uitbreiden voor alle vraagtypes en kwaliteitsvelden
+- [x] Publicatiecontrole op drie talen en voldoende vragen afdwingen
+- [x] Alle 18 Academy-vragenbanken drietalig en leeftijdsgeschikt maken
+- [x] Gegevens veilig op de gekoppelde Neon-database toepassen
+- [x] Resultatenoverzicht, anonieme meting, toegankelijke quiz
+- [x] Ondertekende QR, verificatie met certificaatbeeld, QR-scanner
+- [x] Eigen sleutel CERT_QR_SECRET ingesteld
+- [x] Rustige variant bij beperkte beweging (confetti uit, animaties uit, statische stempel)
+- [x] Quizkleuren op AA-contrast gebracht (getest)
+- [x] Tests: resultaten-aggregatie en toetsenbordbediening
+- [x] Volledige proefrit quiz→certificaat→QR in 3 talen (testdata weer opgeruimd)
+- [x] Passkey-inloggen hersteld (challenge-fout, medewerkers werden niet aangemeld)
+- [x] 2FA: verplicht voor medewerkers, optioneel voor bezoekers (passkey, authenticator, sms BE, berichtenapp buitenland) — pagina /beveiliging
+- [x] Beheerpagina "Verificaties"
+- [x] Sms-gateway sms-gate.app gekoppeld (basisauthenticatie)
+- [ ] Messenger-gebruikersnaam (wacht op gebruiker)
+- [x] Foto-opslag nagelopen (productfoto's bleven niet bewaard bij herstel — hersteld)
+- [x] Deelvoorbeelden per pagina en naam Maxilien
+- [ ] Test-sms blijft 'wachten': gsm haalt niet op (wacht op gebruiker)
