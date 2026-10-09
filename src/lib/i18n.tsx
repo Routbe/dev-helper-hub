@@ -6,6 +6,7 @@ import {
   EXTRA_DICTS,
   EXTRA_LANGS,
   isExtraLang,
+  translatePhrase,
   visibleExtraLangs,
   type ExtraLang,
 } from "@/lib/i18n-extra";
@@ -1659,6 +1660,8 @@ type I18nValue = {
   setExtra: (x: ExtraLang | null) => void;
   /** Kies uit een { nl, fr, en, de?, ar?, … }-object de juiste tekst. */
   pick: <V>(obj: Partial<Record<Lang | ExtraLang, V>> & Record<Lang, V>) => V;
+  /** Vertaal een vaste Engelse zin naar de extra taal (anders ongewijzigd). */
+  tx: (s: string) => string;
 };
 const I18nCtx = createContext<I18nValue>({
   lang: "nl",
@@ -1667,6 +1670,7 @@ const I18nCtx = createContext<I18nValue>({
   extra: null,
   setExtra: () => {},
   pick: (o) => o.nl,
+  tx: (s) => s,
 });
 const EXTRA_KEY = "user_extra_language";
 
@@ -1791,8 +1795,9 @@ export function I18nProvider({ children }: { children: ReactNode }) {
 
   const t = (k: string) => resolve(lang, k, extra);
   const pick: I18nValue["pick"] = (obj) => (extra && obj[extra] !== undefined ? obj[extra]! : obj[lang]);
+  const tx = (s: string) => (lang === "en" ? translatePhrase(extra, s) : s);
   return (
-    <I18nCtx.Provider value={{ lang, setLang, t, extra, setExtra, pick }}>{children}</I18nCtx.Provider>
+    <I18nCtx.Provider value={{ lang, setLang, t, extra, setExtra, pick, tx }}>{children}</I18nCtx.Provider>
   );
 }
 
