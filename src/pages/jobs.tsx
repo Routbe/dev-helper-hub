@@ -6,8 +6,16 @@ import { JOBS_COPY, JOBS_LINKEDIN, JOB_OFFERS } from "@/lib/jobs-content";
 import { Briefcase, GraduationCap, Linkedin } from "lucide-react";
 
 export function JobsPage() {
-  const { lang } = useT();
-  const c = JOBS_COPY[lang];
+  const { lang, tx } = useT();
+  const deep = <T,>(v: T): T =>
+    (typeof v === "string"
+      ? tx(v)
+      : Array.isArray(v)
+        ? v.map(deep)
+        : v && typeof v === "object"
+          ? Object.fromEntries(Object.entries(v).map(([k, x]) => [k, deep(x)]))
+          : v) as T;
+  const c = deep(JOBS_COPY[lang]);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -39,13 +47,13 @@ export function JobsPage() {
                     {c.contracts[job.contract]}
                   </p>
                   <h3 className="font-serif mt-1 text-xl text-[color:var(--ink-forest)]">
-                    {job.title[lang]}
+                    {tx(job.title[lang])}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-foreground/90">
-                    {job.summary[lang]}
+                    {tx(job.summary[lang])}
                   </p>
                   <p className="mt-3 text-sm text-muted-foreground">
-                    {c.regime}: {job.regime[lang]}
+                    {c.regime}: {tx(job.regime[lang])}
                     {job.deadline ? ` · ${c.deadline} ${job.deadline}` : ""}
                   </p>
                 </li>
