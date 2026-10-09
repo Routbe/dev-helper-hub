@@ -39,9 +39,9 @@ export function isExtraLang(v: string | null | undefined): v is ExtraLang {
   return EXTRA_LANGS.some((x) => x.code === v);
 }
 
-/** Vrijgegeven talen, plus de taal die nu (bv. via ?taal=) actief is. */
-export function visibleExtraLangs(active: ExtraLang | null): ExtraLangMeta[] {
-  return EXTRA_LANGS.filter((x) => x.ready || x.code === active);
+/** Alle geplande talen; onafgewerkte talen blijven zichtbaar als "binnenkort". */
+export function visibleExtraLangs(_active: ExtraLang | null): ExtraLangMeta[] {
+  return EXTRA_LANGS;
 }
 
 import dePhrases from "./de-phrases";
