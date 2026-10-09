@@ -246,7 +246,6 @@ const dePhrases: Record<string, string> = {
   "Two profiles": "Zwei Profile",
   "We are currently looking for volunteers in two very different roles. Pick the one that suits you.": "Wir suchen derzeit Ehrenamtliche für zwei sehr unterschiedliche Aufgaben. Wählen Sie die, die zu Ihnen passt.",
   "Discover this profile": "Dieses Profil entdecken",
-  "Practical": "Praktisches",
   "Minimum age: 18 (16 when accompanied by an adult).": "Mindestalter: 18 Jahre (16 Jahre in Begleitung eines Erwachsenen).",
   "Volunteer insurance is covered by the non-profit.": "Die Ehrenamtsversicherung übernimmt der Verein.",
   "Working languages: French and English. Dutch is always welcome — supervision is in French.": "Arbeitssprachen: Französisch und Englisch. Niederländisch ist immer willkommen – die Anleitung erfolgt auf Französisch.",
