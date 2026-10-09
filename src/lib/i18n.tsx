@@ -1928,7 +1928,7 @@ function MoreLanguages({
       {open ? (
         <ul
           role="listbox"
-          className="absolute end-0 top-full z-50 mt-2 max-h-80 w-56 overflow-auto rounded-2xl border border-border bg-popover p-1.5 text-popover-foreground shadow-lg"
+          className="fixed inset-x-4 top-32 z-50 max-h-[min(32rem,calc(100dvh-9rem))] overflow-auto rounded-2xl border border-border bg-popover p-1.5 text-popover-foreground shadow-lg md:absolute md:inset-x-auto md:end-0 md:top-full md:mt-2 md:max-h-80 md:w-56"
         >
           {list.map((x) => (
             <li key={x.code}>
