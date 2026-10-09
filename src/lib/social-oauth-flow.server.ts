@@ -198,7 +198,7 @@ export async function issueSessionRedirect(
     "Set-Cookie",
     cookieHeader(SESSION_COOKIE, sessionToken, { maxAge: 30 * 24 * 3600, secure }),
   );
-  headers.append("Set-Cookie", cookieHeader(OAUTH_STATE_COOKIE, "", { maxAge: 0, secure }));
+  headers.append("Set-Cookie", cookieHeader(clearCookie, "", { maxAge: 0, secure }));
   return new Response(null, { status: 302, headers });
 }
 
