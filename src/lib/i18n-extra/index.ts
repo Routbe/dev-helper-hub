@@ -1,0 +1,45 @@
+/**
+ * Extra talen achter het wereldbolletje. De URL blijft /en/… (Engels is de
+ * drager); teksten komen uit de handvertaalde woordenboeken hieronder.
+ * Een taal verschijnt pas in het menu als `ready` true is (volledig vertaald).
+ * Voorvertonen kan altijd met ?taal=<code> op een /en/-pagina.
+ */
+import de from "./de";
+
+export type ExtraLang = "de" | "ar" | "tr" | "es" | "it" | "pt" | "pl" | "ro" | "zgh";
+
+export type ExtraLangMeta = {
+  code: ExtraLang;
+  /** Naam in de taal zelf. */
+  native: string;
+  english: string;
+  /** Korte code op de knop. */
+  short: string;
+  htmlLang: string;
+  locale: string;
+  dir: "ltr" | "rtl";
+  ready: boolean;
+};
+
+export const EXTRA_LANGS: ExtraLangMeta[] = [
+  { code: "de", native: "Deutsch", english: "German", short: "DE", htmlLang: "de", locale: "de-BE", dir: "ltr", ready: false },
+  { code: "ar", native: "العربية", english: "Arabic", short: "AR", htmlLang: "ar", locale: "ar", dir: "rtl", ready: false },
+  { code: "tr", native: "Türkçe", english: "Turkish", short: "TR", htmlLang: "tr", locale: "tr-TR", dir: "ltr", ready: false },
+  { code: "es", native: "Español", english: "Spanish", short: "ES", htmlLang: "es", locale: "es-ES", dir: "ltr", ready: false },
+  { code: "it", native: "Italiano", english: "Italian", short: "IT", htmlLang: "it", locale: "it-IT", dir: "ltr", ready: false },
+  { code: "pt", native: "Português", english: "Portuguese", short: "PT", htmlLang: "pt", locale: "pt-PT", dir: "ltr", ready: false },
+  { code: "pl", native: "Polski", english: "Polish", short: "PL", htmlLang: "pl", locale: "pl-PL", dir: "ltr", ready: false },
+  { code: "ro", native: "Română", english: "Romanian", short: "RO", htmlLang: "ro", locale: "ro-RO", dir: "ltr", ready: false },
+  { code: "zgh", native: "ⵜⴰⵎⴰⵣⵉⵖⵜ · Tamaziɣt", english: "Tamazight (Berber)", short: "ⵣ", htmlLang: "zgh", locale: "fr-MA", dir: "ltr", ready: false },
+];
+
+export const EXTRA_DICTS: Partial<Record<ExtraLang, Record<string, string>>> = { de };
+
+export function isExtraLang(v: string | null | undefined): v is ExtraLang {
+  return EXTRA_LANGS.some((x) => x.code === v);
+}
+
+/** Vrijgegeven talen, plus de taal die nu (bv. via ?taal=) actief is. */
+export function visibleExtraLangs(active: ExtraLang | null): ExtraLangMeta[] {
+  return EXTRA_LANGS.filter((x) => x.ready || x.code === active);
+}
