@@ -2,6 +2,7 @@ import { PagePhotoBand } from "@/components/PagePhotoBand";
 import { NavHeader } from "@/components/NavHeader";
 import { PageContactForm } from "@/components/PageContactForm";
 import { useT } from "@/lib/i18n";
+import { deepTx } from "@/lib/i18n-extra";
 import { Link } from "@tanstack/react-router";
 import { SLUGS, SUB_SLUGS } from "@/lib/routes-i18n";
 import {
@@ -18,8 +19,8 @@ function profileSplat(lang: "nl" | "fr" | "en", id: string) {
 }
 
 export function VolunteersPage() {
-  const { lang } = useT();
-  const c = VOLUNTEER_COPY[lang];
+  const { lang, tx } = useT();
+  const c = deepTx(tx, VOLUNTEER_COPY[lang]);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -55,11 +56,11 @@ export function VolunteersPage() {
                 className="rounded-3xl border border-border/60 p-6 transition-colors hover:border-[color:var(--color-terracotta)]"
               >
                 <h3 className="font-serif text-lg text-[color:var(--ink-forest)]">
-                  {p.title[lang]}
+                  {tx(p.title[lang])}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-foreground/90">{p.lede[lang]}</p>
+                <p className="mt-2 text-sm leading-relaxed text-foreground/90">{tx(p.lede[lang])}</p>
                 <p className="mt-3 flex items-center gap-2 text-sm text-muted-foreground">
-                  <CalendarClock className="h-4 w-4" aria-hidden /> {p.commitment[lang]}
+                  <CalendarClock className="h-4 w-4" aria-hidden /> {tx(p.commitment[lang])}
                 </p>
                 <span className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-[color:var(--color-terracotta)]">
                   <ArrowUpRight className="h-4 w-4" aria-hidden /> {c.discover}
@@ -111,8 +112,8 @@ function Block({ title, items }: { title: string; items: string[] }) {
 }
 
 export function VolunteerProfilePage({ id }: { id: string }) {
-  const { lang } = useT();
-  const c = VOLUNTEER_COPY[lang];
+  const { lang, tx } = useT();
+  const c = deepTx(tx, VOLUNTEER_COPY[lang]);
   const profile: VolunteerProfile | undefined = getVolunteerProfile(id);
   if (!profile) return null;
 
@@ -132,20 +133,20 @@ export function VolunteerProfilePage({ id }: { id: string }) {
           {c.eyebrow}
         </p>
         <h1 className="font-serif mt-3 text-4xl leading-[1.05] tracking-tight text-[color:var(--ink-forest)] md:text-5xl">
-          {profile.title[lang]}
+          {tx(profile.title[lang])}
         </h1>
-        <p className="mt-6 max-w-2xl text-lg text-muted-foreground">{profile.lede[lang]}</p>
+        <p className="mt-6 max-w-2xl text-lg text-muted-foreground">{tx(profile.lede[lang])}</p>
 
         <p className="mt-6 inline-flex items-center gap-2 rounded-full border border-border/60 px-4 py-2 text-sm text-foreground/90">
           <CalendarClock className="h-4 w-4 text-[color:var(--ink-forest)]" aria-hidden />
-          <span className="font-medium">{c.commitment}:</span> {profile.commitment[lang]}
+          <span className="font-medium">{c.commitment}:</span> {tx(profile.commitment[lang])}
         </p>
 
         <div className="mt-10 grid gap-6">
-          <Block title={c.tasks} items={profile.tasks[lang]} />
+          <Block title={c.tasks} items={deepTx(tx, profile.tasks[lang])} />
           <div className="grid gap-6 md:grid-cols-2">
-            <Block title={c.looking} items={profile.looking[lang]} />
-            <Block title={c.offer} items={profile.offer[lang]} />
+            <Block title={c.looking} items={deepTx(tx, profile.looking[lang])} />
+            <Block title={c.offer} items={deepTx(tx, profile.offer[lang])} />
           </div>
         </div>
 
