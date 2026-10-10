@@ -17,6 +17,7 @@ import {
   YAxis,
 } from "recharts";
 import { Loader2 } from "lucide-react";
+import { RoutBadgesSection } from "@/components/portal/RoutBadgesSection";
 import { getAcademyStats, type AcademyStatRow } from "@/lib/academy-stats.functions";
 import { usePortal } from "@/lib/portal-store";
 import { DOELGROEP_LABEL, TAAL_LABEL, groepeerStats, pct, type Groep } from "@/lib/academy-stats-aggregate";
@@ -187,6 +188,7 @@ export function ResultsPage() {
           </table>
         </section>
       )}
+      <RoutBadgesSection />
     </div>
   );
 }
