@@ -119,6 +119,8 @@ export type RoutClaims = JWTPayload & {
   is_verified_person?: boolean;
   is_verified_business?: boolean;
   is_influencer?: boolean;
+  rout_handle?: string;
+  rout_public_activity?: unknown;
 };
 
 /** Wisselt de code in (met code_verifier), valideert de id_token en haalt userinfo op. */
@@ -296,6 +298,14 @@ export async function upsertRoutUser(
     row = inserted[0]!;
   }
   await recordIdentity(String(row.id), "rout", null, claims.sub, email || null);
+  // Gebruikersnaam = ROUT-handle (bij elke login); Rich Identity overschrijven of wissen.
+  try {
+    const extras = await import("./rout-extras.server");
+    await extras.syncRoutHandle(claims.sub, claims.rout_handle ?? claims.preferred_username);
+    await extras.storePublicActivity(claims.sub, claims.rout_public_activity);
+  } catch (error) {
+    console.error("[rout] handle/activiteit bijwerken mislukt:", error);
+  }
   return { user: toUser(row), role: row.role ?? "user" };
 }
 

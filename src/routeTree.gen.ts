@@ -134,6 +134,7 @@ import { Route as ApiStripeCreatePaymentIntentRouteImport } from './routes/api/s
 import { Route as ApiV1AnimalsRouteImport } from './routes/api/v1/animals'
 import { Route as ApiV1BookingsRouteImport } from './routes/api/v1/bookings'
 import { Route as ApiV1ProductsRouteImport } from './routes/api/v1/products'
+import { Route as ApiWebhooksRoutRouteImport } from './routes/api/webhooks/rout'
 import { Route as ApiWebhooksStripeRouteImport } from './routes/api/webhooks/stripe'
 import { Route as AuthCallbackRoutRouteImport } from './routes/auth_.callback.rout'
 import { Route as AuthenticatedPortaalLangSlugRouteImport } from './routes/_authenticated/portaal.$lang.$slug'
@@ -797,6 +798,11 @@ const ApiV1ProductsRoute = ApiV1ProductsRouteImport.update({
   path: '/api/v1/products',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiWebhooksRoutRoute = ApiWebhooksRoutRouteImport.update({
+  id: '/api/webhooks/rout',
+  path: '/api/webhooks/rout',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiWebhooksStripeRoute = ApiWebhooksStripeRouteImport.update({
   id: '/api/webhooks/stripe',
   path: '/api/webhooks/stripe',
@@ -1062,6 +1068,7 @@ export interface FileRoutesByFullPath {
   '/api/v1/animals': typeof ApiV1AnimalsRoute
   '/api/v1/bookings': typeof ApiV1BookingsRouteWithChildren
   '/api/v1/products': typeof ApiV1ProductsRouteWithChildren
+  '/api/webhooks/rout': typeof ApiWebhooksRoutRoute
   '/api/webhooks/stripe': typeof ApiWebhooksStripeRoute
   '/auth/callback/rout': typeof AuthCallbackRoutRoute
   '/portaal/$lang/$slug': typeof AuthenticatedPortaalLangSlugRoute
@@ -1212,6 +1219,7 @@ export interface FileRoutesByTo {
   '/api/v1/animals': typeof ApiV1AnimalsRoute
   '/api/v1/bookings': typeof ApiV1BookingsRouteWithChildren
   '/api/v1/products': typeof ApiV1ProductsRouteWithChildren
+  '/api/webhooks/rout': typeof ApiWebhooksRoutRoute
   '/api/webhooks/stripe': typeof ApiWebhooksStripeRoute
   '/auth/callback/rout': typeof AuthCallbackRoutRoute
   '/portaal/$lang/$slug': typeof AuthenticatedPortaalLangSlugRoute
@@ -1367,6 +1375,7 @@ export interface FileRoutesById {
   '/api/v1/animals': typeof ApiV1AnimalsRoute
   '/api/v1/bookings': typeof ApiV1BookingsRouteWithChildren
   '/api/v1/products': typeof ApiV1ProductsRouteWithChildren
+  '/api/webhooks/rout': typeof ApiWebhooksRoutRoute
   '/api/webhooks/stripe': typeof ApiWebhooksStripeRoute
   '/auth_/callback/rout': typeof AuthCallbackRoutRoute
   '/_authenticated/portaal/$lang/$slug': typeof AuthenticatedPortaalLangSlugRoute
@@ -1522,6 +1531,7 @@ export interface FileRouteTypes {
     | '/api/v1/animals'
     | '/api/v1/bookings'
     | '/api/v1/products'
+    | '/api/webhooks/rout'
     | '/api/webhooks/stripe'
     | '/auth/callback/rout'
     | '/portaal/$lang/$slug'
@@ -1672,6 +1682,7 @@ export interface FileRouteTypes {
     | '/api/v1/animals'
     | '/api/v1/bookings'
     | '/api/v1/products'
+    | '/api/webhooks/rout'
     | '/api/webhooks/stripe'
     | '/auth/callback/rout'
     | '/portaal/$lang/$slug'
@@ -1826,6 +1837,7 @@ export interface FileRouteTypes {
     | '/api/v1/animals'
     | '/api/v1/bookings'
     | '/api/v1/products'
+    | '/api/webhooks/rout'
     | '/api/webhooks/stripe'
     | '/auth_/callback/rout'
     | '/_authenticated/portaal/$lang/$slug'
@@ -1959,6 +1971,7 @@ export interface RootRouteChildren {
   ApiV1AnimalsRoute: typeof ApiV1AnimalsRoute
   ApiV1BookingsRoute: typeof ApiV1BookingsRouteWithChildren
   ApiV1ProductsRoute: typeof ApiV1ProductsRouteWithChildren
+  ApiWebhooksRoutRoute: typeof ApiWebhooksRoutRoute
   ApiWebhooksStripeRoute: typeof ApiWebhooksStripeRoute
   AuthCallbackRoutRoute: typeof AuthCallbackRoutRoute
   ApiAuthCallbackBlueskyRoute: typeof ApiAuthCallbackBlueskyRoute
@@ -2860,6 +2873,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiV1ProductsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/webhooks/rout': {
+      id: '/api/webhooks/rout'
+      path: '/api/webhooks/rout'
+      fullPath: '/api/webhooks/rout'
+      preLoaderRoute: typeof ApiWebhooksRoutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/webhooks/stripe': {
       id: '/api/webhooks/stripe'
       path: '/api/webhooks/stripe'
@@ -3292,6 +3312,7 @@ const rootRouteChildren: RootRouteChildren = {
   ApiV1AnimalsRoute: ApiV1AnimalsRoute,
   ApiV1BookingsRoute: ApiV1BookingsRouteWithChildren,
   ApiV1ProductsRoute: ApiV1ProductsRouteWithChildren,
+  ApiWebhooksRoutRoute: ApiWebhooksRoutRoute,
   ApiWebhooksStripeRoute: ApiWebhooksStripeRoute,
   AuthCallbackRoutRoute: AuthCallbackRoutRoute,
   ApiAuthCallbackBlueskyRoute: ApiAuthCallbackBlueskyRoute,
