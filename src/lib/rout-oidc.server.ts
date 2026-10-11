@@ -8,7 +8,7 @@ import { ensureAuthSchema, type AppUser } from "./local-auth.server";
 import { readCookie, cookieHeader, siteOrigin } from "./google-oauth.server";
 
 export const ROUT_DISCOVERY = "https://rout.be/.well-known/openid-configuration";
-export const ROUT_CLIENT_ID = "rout_vmNax8o6bAze_eA3p6sifA";
+export const ROUT_CLIENT_ID = "rout_JNB7g_wjSba7GYGSDJs2XQ";
 export const ROUT_SCOPES = "openid profile email linked_accounts";
 export const ROUT_CALLBACK_PATH = "/auth/callback/rout";
 export const ROUT_COOKIE = "maximilien_rout_oidc";
