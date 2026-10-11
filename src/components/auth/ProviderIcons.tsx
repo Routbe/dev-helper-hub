@@ -4,6 +4,8 @@
  * Google vereist het originele meerkleurige "G"-logo (brandingregels), dus
  * gebruiken we hier de exacte paden en kleuren — géén ge-tinte icoonfont.
  */
+import { ROUT_LOGO_PATH } from "./rout-logo";
+
 type IconProps = { className?: string };
 
 const BASE = "h-5 w-5 shrink-0";
